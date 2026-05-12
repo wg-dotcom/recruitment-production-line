@@ -108,7 +108,7 @@ When a request comes in, we don't start from zero.
 - Candidate interview preparation (coach candidates ahead of member interviews)
 - Support interviews with the member
 
-**Output:** Shortlisted candidates + interview intelligence. 2–3 vetted candidates per JD, presentation page link, match rationale, interview reports, and candidate insights that feed Stage 4's advisory conversation with the member.
+**Output:** Shortlisted candidates + interview intelligence. up to 10 vetted candidates per JD, presentation page link, match rationale, interview reports, and candidate insights that feed Stage 4's advisory conversation with the member.
 
 No more TAs hunting for candidates, confirming availability, or polishing resumes. They grab from the safety stock and present.
 
@@ -148,7 +148,7 @@ Each handoff is a documented contract. No verbal pass-offs, no Slack DMs as the 
 |---|---|
 | Sourcing → Candidate Ops | Sourced profile + basic data + priority tag |
 | Candidate Ops → Recruitment | Polished profile + confirmed availability + salary range |
-| Recruitment → Decision Partners | 2–3 matched candidates + presentation page + match rationale + interview reports + candidate insights |
+| Recruitment → Decision Partners | up to 10 matched candidates + presentation page + match rationale + interview reports + candidate insights |
 | Decision Partners → Sourcing (loop) | Demand signal: next roles needed, by which member, by when |
 
 ---

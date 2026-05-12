@@ -109,7 +109,7 @@ Big, horizontal, takes up the top 40% of the canvas. This is what everyone looks
   - Supports interviews with the member
   - HR-side connection with the member / customer
 - **Output sticky (dark blue):** Shortlisted candidates + interview intelligence
-  - 2–3 vetted candidates per JD
+  - up to 10 vetted candidates per JD
   - Presentation page link
   - Match rationale
   - Interview reports
@@ -149,7 +149,7 @@ Simple 4-row sticky note column:
 
 - **Sourcing → Candidate Ops:** Sourced profile + basic data + priority tag
 - **Candidate Ops → Recruitment:** Polished profile + confirmed availability + salary range
-- **Recruitment → Decision Partners:** 2–3 matched candidates + presentation page + match rationale + interview reports + candidate insights
+- **Recruitment → Decision Partners:** up to 10 matched candidates + presentation page + match rationale + interview reports + candidate insights
 - **Decision Partners → Sourcing (loop):** Demand signal — next roles needed, by which member, by when
 
 ---

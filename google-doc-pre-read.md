@@ -134,7 +134,7 @@ It's easier to coach a salesperson into understanding recruiting than to coach a
 
 ### Note: White Glove exception
 
-For White Glove members, Stage 3 and Stage 4 are **led by the same White Glove Advisor**. The Advisor owns both the recruitment execution and the strategic decision-partner relationship for that account. The production line model still applies, but the handoff between stages 3 and 4 happens inside one head, not across two teams.
+For White Glove customers, Stage 3 and Stage 4 are **led by the same White Glove Advisor**. The Advisor owns both the recruitment execution and the strategic decision-partner relationship for that account. The production line model still applies, but the handoff between stages 3 and 4 happens inside one head, not across two teams.
 
 This keeps the White Glove experience tight and personal while still benefiting from Stages 1 and 2 (sourcing volume and candidate ops polish) feeding the same way as every other line.
 

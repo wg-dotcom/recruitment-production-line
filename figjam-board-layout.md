@@ -137,7 +137,7 @@ Big, horizontal, takes up the top 40% of the canvas. This is what everyone looks
 **White Glove note (amber/highlight sticky spanning Stage 3 and Stage 4):**
 
 > **Note · White Glove Exception**
-> For White Glove members, Stage 3 and Stage 4 are led by the same White Glove Advisor. The Advisor owns both recruitment execution and the strategic decision-partner relationship. The production line still applies, but the handoff between 3 and 4 happens inside one head.
+> For White Glove customers, Stage 3 and Stage 4 are led by the same White Glove Advisor. The Advisor owns both recruitment execution and the strategic decision-partner relationship. The production line still applies, but the handoff between 3 and 4 happens inside one head.
 
 ---
 

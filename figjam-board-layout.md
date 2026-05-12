@@ -248,9 +248,9 @@ Title: **"Where this could go sideways"**
 
 Three columns:
 
-| Risk 1: Handoff Tax | Risk 2: Losing Surfacing Speed | Risk 3: Can't Depend on Jesus |
+| Risk 1: Handoff Tax | Risk 2: Losing Surfacing Speed | Risk 3: Can't Depend on One Person |
 |---|---|---|
-| Sloppy handoffs eat the efficiency gains | Smaller ready-to-present DB could slow us down | If only Jesus can run it, it isn't built right |
+| Sloppy handoffs eat the efficiency gains | Smaller ready-to-present DB could slow us down | If only one person can run it, it isn't built right |
 | **Mitigation:** Documented input/output specs. SLAs. Single source of truth. | **Mitigation:** Continuous feed into safety stock. Assault Team for urgent. Watch time-to-first-presentation. | **Mitigation:** Stage leads own throughput. We manage the system, not the requests. |
 
 Leave empty sticky notes below each column labeled **"Add your concerns here"** for the live brainstorm.

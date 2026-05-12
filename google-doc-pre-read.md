@@ -293,7 +293,7 @@ Right now we have huge sourcing volume and we surface fast. The safety stock mod
 - For urgent or unique roles, the Assault Team fast-tracks through Candidate Ops with a priority flag.
 - Metric to watch: time-to-first-presentation. Should decrease, not increase.
 
-### Risk 3. The system can't depend on me to run
+### Risk 3. The system can't depend on one person to run
 
 If this requires my supply chain brain to operate every day, it isn't built right.
 

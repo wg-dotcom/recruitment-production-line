@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recruitment as a Production Line — Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #093a3e;
+      --primary-dark: #06282b;
+      --primary-deeper: #044449;
+      --dark: #0e1014;
+      --highlight: #c98850;
+      --bg-light: #f0eee5;
+      --bg-subtle: #e5e2d3;
+      --bg-page: #f3f2ec;
+      --bg-card: #fafaf7;
+      --bg-card-hover: #f0eee5;
+      --white: #ffffff;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --text-muted: #999999;
+      --on-dark: #f3f2ec;
+      --on-dark-mid: rgba(243,242,236,0.9);
+      --on-dark-light: rgba(243,242,236,0.7);
+      --on-dark-muted: rgba(243,242,236,0.5);
+      --border: rgba(14,16,20,0.12);
+      --border-strong: rgba(14,16,20,0.2);
+      --tag-bg: rgba(9,58,62,0.1);
+      --tag-color: #044449;
+      --shadow-sm: 0 1px 2px rgba(14,16,20,0.06);
+      --shadow-md: 0 4px 16px rgba(14,16,20,0.08);
+      --shadow-lg: 0 12px 40px rgba(14,16,20,0.1);
+      --radius: 14px;
+      --font-heading: 'Inter', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Fraunces', Georgia, serif;
+
+      --stage-1: #c98850;
+      --stage-2: #9b6a3d;
+      --stage-3: #093a3e;
+      --stage-4: #2d5a3d;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; color: var(--text-primary); background: var(--bg-page); line-height: 1.6; }
+
+    /* Header */
+    .site-header { background: var(--bg-card); padding: 0 32px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border); }
+    .header-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .header-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text-primary); }
+    .header-divider { width: 1px; height: 28px; background: var(--border); }
+    .header-title { font-family: var(--font-heading); font-weight: 600; font-size: 14px; color: var(--text-primary); opacity: 0.7; letter-spacing: 0.03em; }
+    .header-sagan { display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--text-mid); letter-spacing: 0.03em; text-transform: uppercase; }
+
+    /* Hero */
+    .hero { background: linear-gradient(145deg, var(--dark) 0%, var(--primary-deeper) 40%, var(--primary) 100%); color: var(--white); padding: 80px 32px 88px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,136,80,0.08) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+    .hero-eyebrow { display: inline-block; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); border-radius: 100px; padding: 6px 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 22px; color: rgba(255,255,255,0.95); }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(36px, 5.5vw, 60px); font-weight: 500; line-height: 1.05; margin-bottom: 18px; letter-spacing: -0.025em; }
+    .hero-sub { font-size: 18px; color: var(--on-dark-mid); max-width: 660px; margin: 0 auto 32px; line-height: 1.6; }
+    .hero-meta { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+    .hero-meta-item { display: flex; align-items: center; gap: 8px; color: var(--on-dark-mid); font-size: 13px; font-weight: 500; }
+    .hero-meta-item strong { color: white; }
+
+    /* TL;DR card */
+    .tldr-wrap { max-width: 900px; margin: -36px auto 0; padding: 0 24px; position: relative; z-index: 10; }
+    .tldr-card { background: var(--bg-card); border-radius: var(--radius); padding: 30px 36px; box-shadow: var(--shadow-md); border-left: 4px solid var(--primary); font-size: 15px; color: var(--text-mid); line-height: 1.75; }
+    .tldr-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+    .tldr-card p { margin-bottom: 10px; }
+    .tldr-card p:last-child { margin-bottom: 0; }
+
+    /* Section */
+    .section { max-width: 1180px; margin: 0 auto; padding: 64px 24px; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 40px); font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 12px; }
+    .section-sub { font-size: 16px; color: var(--text-light); max-width: 640px; margin: 0 auto; }
+
+    /* Production line flow */
+    .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; position: relative; }
+    .stage { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .stage:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .stage-header { padding: 22px 22px 18px; color: white; position: relative; }
+    .stage-1 .stage-header { background: linear-gradient(135deg, #c98850, #b07640); }
+    .stage-2 .stage-header { background: linear-gradient(135deg, #9b6a3d, #7a4f2a); }
+    .stage-3 .stage-header { background: linear-gradient(135deg, #093a3e, #044449); }
+    .stage-4 .stage-header { background: linear-gradient(135deg, #2d5a3d, #1f4029); }
+    .stage-num { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; margin-bottom: 6px; }
+    .stage-name { font-family: var(--font-display); font-size: 22px; font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+
+    .stage-body { padding: 20px 22px 22px; flex: 1; display: flex; flex-direction: column; gap: 16px; }
+    .io-block { font-size: 13px; line-height: 1.55; }
+    .io-label { font-size: 9px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .io-label.input-label { color: var(--text-light); }
+    .io-label.output-label { color: var(--primary); }
+    .io-label .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+    .input-label .dot { background: var(--text-light); }
+    .output-label .dot { background: var(--primary); }
+    .io-content { color: var(--text-mid); font-size: 13px; line-height: 1.6; padding: 10px 12px; background: var(--bg-light); border-radius: 8px; border-left: 3px solid var(--border-strong); }
+    .stage-1 .io-content.output-box { border-left-color: var(--stage-1); }
+    .stage-2 .io-content.output-box { border-left-color: var(--stage-2); }
+    .stage-3 .io-content.output-box { border-left-color: var(--stage-3); }
+    .stage-4 .io-content.output-box { border-left-color: var(--stage-4); }
+
+    .activities { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+    .activities li { font-size: 13px; color: var(--text-mid); padding-left: 18px; position: relative; line-height: 1.5; }
+    .activities li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 2px; background: var(--primary); border-radius: 2px; }
+
+    /* Loop label */
+    .feedback-loop { text-align: center; margin-top: 32px; padding: 20px 24px; background: var(--bg-light); border-radius: var(--radius); border: 1px dashed var(--border-strong); }
+    .feedback-loop-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; }
+    .feedback-loop-text { font-size: 14px; color: var(--text-mid); }
+    .feedback-loop-text strong { color: var(--text-primary); }
+
+    .wg-note { margin-top: 16px; padding: 20px 24px; background: var(--bg-card); border-radius: var(--radius); border-left: 4px solid var(--highlight); display: flex; align-items: flex-start; gap: 16px; box-shadow: var(--shadow-sm); }
+    .wg-note-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--highlight); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 600; font-size: 16px; }
+    .wg-note-body { flex: 1; }
+    .wg-note-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); margin-bottom: 6px; }
+    .wg-note-text { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+    .wg-note-text strong { color: var(--text-primary); }
+
+    /* Handoff table */
+    .handoffs { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .handoffs table { width: 100%; border-collapse: collapse; }
+    .handoffs th { background: var(--dark); color: var(--on-dark); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-align: left; padding: 16px 22px; }
+    .handoffs td { padding: 16px 22px; font-size: 14px; color: var(--text-mid); border-top: 1px solid var(--border); }
+    .handoffs td:first-child { font-weight: 600; color: var(--text-primary); width: 36%; }
+
+    /* Risks */
+    .risks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .risk-card { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 28px 26px; box-shadow: var(--shadow-sm); }
+    .risk-num { font-family: var(--font-display); font-size: 36px; color: var(--highlight); line-height: 1; margin-bottom: 8px; font-weight: 500; }
+    .risk-title { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+    .risk-desc { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 18px; }
+    .risk-mitigation-label { font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+    .risk-mitigation { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+    .risk-mitigation ul { list-style: none; padding: 0; margin: 0; }
+    .risk-mitigation li { padding-left: 18px; position: relative; margin-bottom: 6px; }
+    .risk-mitigation li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+
+    /* Workstreams */
+    .rollout { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; }
+    .phase { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 26px 22px; box-shadow: var(--shadow-sm); position: relative; display: flex; flex-direction: column; gap: 14px; }
+    .phase-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; align-self: flex-start; }
+    .phase-status.status-done { background: rgba(45,90,61,0.12); color: var(--stage-4); }
+    .phase-status.status-progress { background: rgba(201,136,80,0.16); color: #a76e3d; }
+    .phase-status.status-build { background: rgba(201,136,80,0.16); color: #a76e3d; }
+    .phase-status.status-define { background: var(--tag-bg); color: var(--primary); }
+    .phase-status .pulse { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .phase-name { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
+    .phase-desc { font-size: 13.5px; color: var(--text-mid); line-height: 1.6; }
+    .phase-block-label { font-size: 9px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+    .phase-list { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-mid); line-height: 1.55; }
+    .phase-list li { padding-left: 14px; position: relative; margin-bottom: 5px; }
+    .phase-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 2px; background: var(--primary); border-radius: 2px; }
+    .phase-questions { background: var(--bg-light); border-radius: 8px; padding: 12px 14px; font-size: 12.5px; color: var(--text-mid); line-height: 1.55; margin-top: auto; }
+    .phase-questions .phase-block-label { color: var(--highlight); margin-bottom: 6px; }
+    .phase-questions ul { list-style: none; padding: 0; margin: 0; }
+    .phase-questions li { padding-left: 14px; position: relative; margin-bottom: 4px; }
+    .phase-questions li::before { content: '?'; position: absolute; left: 0; top: 0; color: var(--highlight); font-weight: 700; }
+
+    .build-principle { margin-top: 28px; padding: 26px 30px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow-sm); display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .principle-item { display: flex; flex-direction: column; gap: 6px; }
+    .principle-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); }
+    .principle-text { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+    .principle-text strong { color: var(--text-primary); }
+
+    /* Database section */
+    .db-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .db-card { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 28px 28px; box-shadow: var(--shadow-sm); }
+    .db-card-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+    .db-card-title { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--text-primary); margin-bottom: 14px; letter-spacing: -0.01em; line-height: 1.2; }
+    .db-card-text { font-size: 14px; color: var(--text-mid); line-height: 1.65; margin-bottom: 14px; }
+    .db-card-text:last-child { margin-bottom: 0; }
+    .db-card-text strong { color: var(--text-primary); }
+    .db-card ul { list-style: none; padding: 0; margin: 0; }
+    .db-card ul li { font-size: 13.5px; color: var(--text-mid); line-height: 1.6; padding-left: 18px; position: relative; margin-bottom: 6px; }
+    .db-card ul li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 2px; background: var(--primary); border-radius: 2px; }
+    .db-card ul li strong { color: var(--text-primary); }
+    .db-recommendation { margin-top: 24px; padding: 22px 28px; background: linear-gradient(145deg, var(--dark) 0%, var(--primary-deeper) 100%); color: var(--on-dark); border-radius: var(--radius); display: flex; align-items: center; gap: 20px; }
+    .db-recommendation-badge { flex-shrink: 0; padding: 6px 14px; background: var(--highlight); color: white; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    .db-recommendation-text { font-size: 14px; line-height: 1.6; color: var(--on-dark-mid); }
+    .db-recommendation-text strong { color: white; }
+
+    .db-openq { margin-top: 16px; padding: 22px 28px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--highlight); }
+    .db-openq-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); margin-bottom: 8px; }
+    .db-openq-title { font-family: var(--font-display); font-size: 18px; font-weight: 500; color: var(--text-primary); margin-bottom: 8px; }
+    .db-openq-text { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+    .db-openq-text strong { color: var(--text-primary); }
+
+    /* Consolidated questions grid */
+    .questions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .q-card { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 28px 26px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px; }
+    .q-card-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .q-card-title { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.25; }
+    .q-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .q-card ul li { font-size: 14px; color: var(--text-mid); line-height: 1.6; padding-left: 22px; position: relative; }
+    .q-card ul li::before { content: '?'; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background: var(--primary); color: white; border-radius: 50%; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .q-card ul li strong { color: var(--text-primary); }
+
+    /* Framework section */
+    .framework-intro { max-width: 820px; margin: 0 auto 40px; text-align: center; font-size: 16px; color: var(--text-mid); line-height: 1.75; }
+    .framework-intro p { margin-bottom: 14px; }
+    .framework-intro p:last-child { margin-bottom: 0; }
+    .framework-intro strong { color: var(--text-primary); }
+
+    .sop-cycle { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 32px; position: relative; }
+    .sop-step { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 22px 18px; text-align: center; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 8px; }
+    .sop-step-num { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--highlight); line-height: 1; }
+    .sop-step-phase { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--primary); }
+    .sop-step-map { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+    .sop-step-map strong { color: var(--text-primary); }
+
+    .case-study { background: linear-gradient(145deg, var(--dark) 0%, var(--primary-deeper) 60%, var(--primary) 100%); border-radius: var(--radius); padding: 44px 48px; color: var(--on-dark); position: relative; overflow: hidden; }
+    .case-study::before { content: ''; position: absolute; top: -40%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201,136,80,0.12) 0%, transparent 70%); border-radius: 50%; }
+    .case-study-inner { position: relative; z-index: 2; }
+    .case-study-eyebrow { display: inline-block; padding: 5px 14px; background: rgba(201,136,80,0.2); border: 1px solid rgba(201,136,80,0.4); color: var(--highlight); border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+    .case-study-title { font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); font-weight: 500; color: white; margin-bottom: 18px; letter-spacing: -0.02em; line-height: 1.2; }
+    .case-study-body { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+    .case-study-text { font-size: 15px; line-height: 1.75; color: var(--on-dark-mid); }
+    .case-study-text p { margin-bottom: 12px; }
+    .case-study-text p:last-child { margin-bottom: 0; }
+    .case-study-text strong { color: white; }
+    .case-study-metrics { display: flex; flex-direction: column; gap: 16px; }
+    .case-metric { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 10px; padding: 18px 22px; }
+    .case-metric-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--highlight); margin-bottom: 6px; }
+    .case-metric-value { font-family: var(--font-display); font-size: 22px; color: white; line-height: 1.2; font-weight: 500; }
+    .case-metric-note { font-size: 12px; color: var(--on-dark-mid); margin-top: 4px; }
+
+    .framework-parallel { margin-top: 32px; padding: 24px 28px; background: var(--bg-card); border-radius: var(--radius); border-left: 4px solid var(--highlight); box-shadow: var(--shadow-sm); }
+    .framework-parallel-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); margin-bottom: 10px; }
+    .framework-parallel-text { font-size: 15px; color: var(--text-mid); line-height: 1.7; }
+    .framework-parallel-text strong { color: var(--text-primary); }
+
+    /* Decisions */
+    .decisions { background: linear-gradient(145deg, var(--dark) 0%, var(--primary-deeper) 100%); border-radius: var(--radius); padding: 56px 48px; color: var(--on-dark); }
+    .decisions-header { text-align: center; margin-bottom: 36px; }
+    .decisions-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(201,136,80,0.95); margin-bottom: 10px; }
+    .decisions-title { font-family: var(--font-display); font-size: clamp(26px, 3.5vw, 36px); font-weight: 500; color: white; letter-spacing: -0.02em; line-height: 1.2; }
+    .decisions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .decision { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; padding: 28px 26px; }
+    .decision-num { font-family: var(--font-display); font-size: 32px; color: var(--highlight); line-height: 1; margin-bottom: 12px; font-weight: 500; }
+    .decision-title { font-size: 17px; font-weight: 700; color: white; margin-bottom: 10px; }
+    .decision-desc { font-size: 14px; color: var(--on-dark-mid); line-height: 1.6; }
+
+    /* Open questions */
+    .open-q { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 36px 40px; box-shadow: var(--shadow-sm); }
+    .open-q-title { font-family: var(--font-display); font-size: 22px; color: var(--text-primary); margin-bottom: 8px; font-weight: 500; }
+    .open-q-sub { font-size: 14px; color: var(--text-light); margin-bottom: 24px; font-style: italic; }
+    .open-q ul { list-style: none; padding: 0; margin: 0; }
+    .open-q li { padding: 14px 0 14px 28px; position: relative; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+    .open-q li:first-child { border-top: none; }
+    .open-q li::before { content: '?'; position: absolute; left: 0; top: 14px; width: 18px; height: 18px; background: var(--primary); color: white; border-radius: 50%; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    /* Footer */
+    .site-footer { background: var(--dark); color: var(--on-dark-mid); padding: 36px 24px; text-align: center; font-size: 13px; }
+    .site-footer strong { color: var(--on-dark); }
+    .site-footer a { color: var(--highlight); text-decoration: none; }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .flow, .rollout, .risks, .decisions-grid, .questions-grid { grid-template-columns: repeat(2, 1fr); }
+      .build-principle { grid-template-columns: 1fr; gap: 14px; }
+      .sop-cycle { grid-template-columns: repeat(2, 1fr); }
+      .case-study-body { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .flow, .rollout, .risks, .decisions-grid, .db-grid, .questions-grid { grid-template-columns: 1fr; }
+      .sop-cycle { grid-template-columns: 1fr; }
+      .case-study { padding: 32px 24px; }
+      .db-recommendation { flex-direction: column; align-items: flex-start; }
+      .section { padding: 48px 18px; }
+      .decisions { padding: 40px 24px; }
+      .open-q { padding: 28px 22px; }
+      .handoffs th, .handoffs td { padding: 12px 14px; font-size: 13px; }
+      .handoffs td:first-child { width: 40%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-header">
+    <div class="header-inner">
+      <a class="header-brand" href="https://saganpassport.com/" target="_blank">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" style="height:26px;" />
+        <div class="header-divider"></div>
+        <span class="header-title">Sagan Passport</span>
+      </a>
+      <div class="header-sagan">
+        <span>Powered by</span>
+        <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-2-e1759568299542.png" alt="Sagan" style="height:20px;" />
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Internal Proposal &middot; Wednesday Brainstorm</div>
+      <h1>Recruitment as a Production Line</h1>
+      <p class="hero-sub">Four stages, four outputs, one feedback loop. A lean process where each team owns one job, bottlenecks are visible, and we scale by managing throughput instead of managing chaos.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>Author:</strong> Jesus Pacheco</div>
+        <div class="hero-meta-item"><strong>For:</strong> Leadership Team</div>
+        <div class="hero-meta-item"><strong>Date:</strong> May 8, 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tldr-wrap">
+    <div class="tldr-card">
+      <div class="tldr-label">TL;DR</div>
+      <p>Today our TAs source, vet, polish, present, and manage member relationships at the same time. That works at low volume. It breaks when we scale. Quality drifts, delivery times are unpredictable, and bottlenecks are invisible because everything is tangled together.</p>
+      <p>The proposal: turn recruitment into a real production line. Recruiters recruit, salespeople sell, candidate ops polishes, sourcing fills the funnel. We present in minutes, bottlenecks become obvious, and we scale by managing the system instead of every request.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Framework</div>
+      <h2 class="section-title">Sales &amp; Operations Planning, applied to recruitment</h2>
+      <p class="section-sub">We're not inventing this. We're adopting a 40-year-old supply chain discipline that's already transformed industries from manufacturing to fashion.</p>
+    </div>
+
+    <div class="framework-intro">
+      <p><strong>Sales &amp; Operations Planning (S&amp;OP)</strong> is how operationally serious companies match what customers will want with what the business can produce. A five-step cycle: demand planning, supply planning, aggregate planning, execution, performance review. Every modern supply chain runs on some version of it.</p>
+      <p>We've been running recruitment without this discipline. Each member request lands as a one-off, gets pushed through whoever has capacity, and we react to bottlenecks after they hurt us. S&amp;OP turns that on its head: plan demand, build supply ahead of it, match the two with structured handoffs, review performance at the stage level.</p>
+    </div>
+
+    <div class="sop-cycle">
+      <div class="sop-step">
+        <div class="sop-step-num">01</div>
+        <div class="sop-step-phase">Demand Planning</div>
+        <div class="sop-step-map">Member hiring roadmaps + <strong>Decision Partner</strong> demand signals</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">02</div>
+        <div class="sop-step-phase">Supply Planning</div>
+        <div class="sop-step-map">Sourcing capacity + <strong>Candidate Ops</strong> throughput</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">03</div>
+        <div class="sop-step-phase">Aggregate Planning</div>
+        <div class="sop-step-map">AI matching + <strong>stage capacity</strong> per workstream</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">04</div>
+        <div class="sop-step-phase">Execution</div>
+        <div class="sop-step-map">The four <strong>parallel workstreams</strong> in motion</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">05</div>
+        <div class="sop-step-phase">Performance Review</div>
+        <div class="sop-step-map">Stage-level metrics like <strong>time-to-first-presentation</strong></div>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <div class="case-study-inner">
+        <div class="case-study-eyebrow">Business case · It worked before</div>
+        <h3 class="case-study-title">Dell's Build-to-Order revolution</h3>
+        <div class="case-study-body">
+          <div class="case-study-text">
+            <p>In the 1990s, Dell rewrote PC manufacturing with one big idea: <strong>stop keeping finished PCs in stock</strong>. Instead, hold a safety stock of components and assemble each machine only when an order came in.</p>
+            <p>The structural parallel to what we're proposing is almost one-to-one:</p>
+            <p>
+              <strong>Component safety stock</strong> = our ready-to-present candidate database.<br>
+              <strong>Build-to-order assembly</strong> = match-on-demand recruitment.<br>
+              <strong>Direct sales relationship</strong> = the Decision Partner.
+            </p>
+            <p>Same logic, different industry. We're applying it to talent.</p>
+          </div>
+          <div class="case-study-metrics">
+            <div class="case-metric">
+              <div class="case-metric-label">Inventory days</div>
+              <div class="case-metric-value">32 → 4 days</div>
+              <div class="case-metric-note">87% reduction</div>
+            </div>
+            <div class="case-metric">
+              <div class="case-metric-label">Delivery time</div>
+              <div class="case-metric-value">6 weeks → 5 days</div>
+              <div class="case-metric-note">Competitors couldn't catch up</div>
+            </div>
+            <div class="case-metric">
+              <div class="case-metric-label">Market position</div>
+              <div class="case-metric-value">#1 PC maker by 2001</div>
+              <div class="case-metric-note">Built on the operating model, not the product</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="framework-parallel">
+      <div class="framework-parallel-label">Why this matters for us</div>
+      <div class="framework-parallel-text">Dell's competitors weren't beaten on product or price. They were beaten on <strong>operating model</strong>. The same opportunity is open to us in recruitment. The agencies we compete with are stuck running the slow, tangled flow. We can build the production line they don't even see.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">The Model</div>
+      <h2 class="section-title">Four stages. One flow. A feedback loop.</h2>
+      <p class="section-sub">Each stage takes a clear input, runs a focused set of activities, and produces a clear output. The output of one stage becomes the input of the next.</p>
+    </div>
+
+    <div class="flow">
+      <div class="stage stage-1">
+        <div class="stage-header">
+          <div class="stage-num">Stage 01</div>
+          <div class="stage-name">Sourcing</div>
+        </div>
+        <div class="stage-body">
+          <div class="io-block">
+            <div class="io-label input-label"><span class="dot"></span> Input</div>
+            <div class="io-content">
+              <strong>Sourcing Strategy.</strong> Role demand forecast, location and seniority targets, market intel, priority flags. Shaped by Stage 4 feedback.
+            </div>
+          </div>
+          <div class="io-block">
+            <div class="io-label"><span class="dot" style="background:var(--stage-1)"></span> Activities</div>
+            <ul class="activities">
+              <li>Active Pipelines (EAs, CSRs, SDRs, Bookkeepers, Accountants)</li>
+              <li>Assault Team (specialty / hard-to-fill roles)</li>
+              <li>Strategic Sourcing execution</li>
+            </ul>
+          </div>
+          <div class="io-block">
+            <div class="io-label output-label"><span class="dot"></span> Output</div>
+            <div class="io-content output-box">
+              <strong>Raw candidate pool.</strong> Sourced profiles with basic data, tagged by role family and priority. Volume-focused.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage stage-2">
+        <div class="stage-header">
+          <div class="stage-num">Stage 02</div>
+          <div class="stage-name">Candidate Operations</div>
+        </div>
+        <div class="stage-body">
+          <div class="io-block">
+            <div class="io-label input-label"><span class="dot"></span> Input</div>
+            <div class="io-content">
+              <strong>Raw candidate pool</strong> from Stage 1.
+            </div>
+          </div>
+          <div class="io-block">
+            <div class="io-label"><span class="dot" style="background:var(--stage-2)"></span> Activities</div>
+            <ul class="activities">
+              <li>Polished resumes + intro videos</li>
+              <li>Confirms availability and salary</li>
+              <li>Standardized presentation cards</li>
+              <li>Keeps candidates warm</li>
+            </ul>
+          </div>
+          <div class="io-block">
+            <div class="io-label output-label"><span class="dot"></span> Output</div>
+            <div class="io-content output-box">
+              <strong>Ready-to-present database.</strong> The safety stock. Polished profile, video, confirmed availability and salary, role tags for AI matching.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage stage-3">
+        <div class="stage-header">
+          <div class="stage-num">Stage 03</div>
+          <div class="stage-name">Recruitment / TAs</div>
+        </div>
+        <div class="stage-body">
+          <div class="io-block">
+            <div class="io-label input-label"><span class="dot"></span> Input</div>
+            <div class="io-content">
+              <strong>Ready-to-present database</strong> from Stage 2, plus the incoming JD from the member.
+            </div>
+          </div>
+          <div class="io-block">
+            <div class="io-label"><span class="dot" style="background:var(--stage-3)"></span> Activities</div>
+            <ul class="activities">
+              <li>AI matching: JD &harr; database</li>
+              <li>Builds presentation pages</li>
+              <li>Owns operational / HR relationship</li>
+              <li>Candidate interview preparation</li>
+              <li>Supports interviews with the member</li>
+              <li>HR-side connection with the member / customer</li>
+            </ul>
+          </div>
+          <div class="io-block">
+            <div class="io-label output-label"><span class="dot"></span> Output</div>
+            <div class="io-content output-box">
+              <strong>Shortlisted, matched candidates + interview intelligence.</strong> 2–3 vetted candidates per JD, presentation page, match rationale, interview reports, and candidate insights to inform Stage 4's advisory conversation.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage stage-4">
+        <div class="stage-header">
+          <div class="stage-num">Stage 04</div>
+          <div class="stage-name">Decision Partners / Account Growth</div>
+        </div>
+        <div class="stage-body">
+          <div class="io-block">
+            <div class="io-label input-label"><span class="dot"></span> Input</div>
+            <div class="io-content">
+              <strong>Shortlisted candidates</strong> from Stage 3, plus member context (hiring roadmap, operations, growth trajectory).
+            </div>
+          </div>
+          <div class="io-block">
+            <div class="io-label"><span class="dot" style="background:var(--stage-4)"></span> Activities</div>
+            <ul class="activities">
+              <li>Strategic member relationship</li>
+              <li>Knows hiring roadmap + operations</li>
+              <li>Advises on the hire (sommelier-level judgment)</li>
+              <li>Manages expansion + retention</li>
+            </ul>
+          </div>
+          <div class="io-block">
+            <div class="io-label output-label"><span class="dot"></span> Output</div>
+            <div class="io-content output-box">
+              <strong>Placement, retention, account growth.</strong> Hire confirmed, roadmap updated, next hire identified.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feedback-loop">
+      <div class="feedback-loop-title">↻ Demand Signal Feedback Loop</div>
+      <div class="feedback-loop-text">Stage 4's <strong>"next hire identified"</strong> output flows back into Stage 1's sourcing strategy. Account growth tells sourcing what to build pipelines for. The line keeps feeding itself.</div>
+    </div>
+
+    <div class="wg-note">
+      <div class="wg-note-icon">WG</div>
+      <div class="wg-note-body">
+        <div class="wg-note-label">Note · White Glove Exception</div>
+        <div class="wg-note-text">For White Glove members, <strong>Stage 3 and Stage 4 are led by the same White Glove Advisor</strong>. The Advisor owns both the recruitment execution and the strategic decision-partner relationship for that account. The production line still applies, but the handoff between stages 3 and 4 happens inside one head.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-light); max-width: 100%; padding-left: 0; padding-right: 0;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
+      <div class="section-header">
+        <div class="section-eyebrow">Handoff Contracts</div>
+        <h2 class="section-title">The glue between stages</h2>
+        <p class="section-sub">Each handoff is a documented contract. No verbal pass-offs, no Slack DMs as the source of truth.</p>
+      </div>
+
+      <div class="handoffs">
+        <table>
+          <thead>
+            <tr>
+              <th>From → To</th>
+              <th>What gets passed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sourcing → Candidate Ops</td>
+              <td>Sourced profile + basic data + priority tag</td>
+            </tr>
+            <tr>
+              <td>Candidate Ops → Recruitment</td>
+              <td>Polished profile + confirmed availability + salary range</td>
+            </tr>
+            <tr>
+              <td>Recruitment → Decision Partners</td>
+              <td>2–3 matched candidates + presentation page + match rationale + interview reports + candidate insights</td>
+            </tr>
+            <tr>
+              <td>Decision Partners → Sourcing (loop)</td>
+              <td>Demand signal: next roles needed, by which member, by when</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Workstreams</div>
+      <h2 class="section-title">Four parallel workstreams. One execution gate.</h2>
+      <p class="section-sub">We build in parallel, not in sequence. The system is ready to execute the day Candidate Operations starts delivering.</p>
+    </div>
+
+    <div class="rollout">
+
+      <div class="phase">
+        <div class="phase-status status-done"><span class="pulse"></span> Mostly in place</div>
+        <div class="phase-name">Sourcing</div>
+        <div>
+          <div class="phase-block-label">Where we are</div>
+          <div class="phase-desc">Outbound sourcing already running. Active pipelines built for the most-requested roles (EAs, CSRs, SDRs, Bookkeepers, Accountants). Thanks to the unified Recruitment + Sourcing effort.</div>
+        </div>
+        <div>
+          <div class="phase-block-label">What's left</div>
+          <ul class="phase-list">
+            <li>Give it formal structure (Active / Assault / Strategic split)</li>
+            <li>Name leads per sub-function</li>
+            <li>Document the handoff contract with Candidate Ops</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-status status-build"><span class="pulse"></span> To build</div>
+        <div class="phase-name">Candidate Operations</div>
+        <div>
+          <div class="phase-block-label">Where we are</div>
+          <div class="phase-desc">Brand new department. The profile we need: efficient, async-first, follows instructions, attention to detail.</div>
+        </div>
+        <div>
+          <div class="phase-block-label">What's left</div>
+          <ul class="phase-list">
+            <li>Stand up the team</li>
+            <li>Build AI tools: weekly availability confirmation, salary refresh, video / resume polish workflow, warm-keep cadence</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-status status-done"><span class="pulse"></span> Already performing</div>
+        <div class="phase-name">Recruitment / TAs</div>
+        <div>
+          <div class="phase-block-label">Where we are</div>
+          <div class="phase-desc">TA team already delivering across Passport and Core. The recruiting muscle exists.</div>
+        </div>
+        <div>
+          <div class="phase-block-label">What's left</div>
+          <ul class="phase-list">
+            <li>Add Pod Lead figure(s) to keep every HR on track</li>
+            <li>Build AI tools: matching tool, presentation page builder, interview report creator</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-status status-define"><span class="pulse"></span> To define</div>
+        <div class="phase-name">Decision Partners</div>
+        <div>
+          <div class="phase-block-label">Where we are</div>
+          <div class="phase-desc">Very specific profile we haven't formalized yet. Initial thinking: a blend of Account Manager + Pod Lead. First names that come to mind internally: Manuel, Manuela, Feli (or similar profiles).</div>
+        </div>
+        <div>
+          <div class="phase-block-label">What's left</div>
+          <ul class="phase-list">
+            <li>Scope the role precisely (this is the primary focus)</li>
+            <li>Identify the right people</li>
+            <li>Define the comp model</li>
+            <li>Set the member-handling protocol</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="build-principle">
+      <div class="principle-item">
+        <div class="principle-label">Build in parallel</div>
+        <div class="principle-text">All four workstreams can advance <strong>at the same time</strong>. No one waits for the previous one to finish.</div>
+      </div>
+      <div class="principle-item">
+        <div class="principle-label">Execution gate</div>
+        <div class="principle-text">We're ready to run the new model <strong>once Candidate Operations is delivering</strong>. That's the only hard dependency.</div>
+      </div>
+      <div class="principle-item">
+        <div class="principle-label">Primary focus</div>
+        <div class="principle-text">Scoping the <strong>Decision Partner / Account Growth role</strong> well. It's the linchpin of the whole system.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-light); max-width: 100%; padding-left: 0; padding-right: 0;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
+    <div class="section-header">
+      <div class="section-eyebrow">Infrastructure</div>
+      <h2 class="section-title">The ready-to-present database</h2>
+      <p class="section-sub">The safety stock that makes the whole line work. If this isn't well built, nothing downstream is fast or reliable.</p>
+    </div>
+
+    <div class="db-grid">
+      <div class="db-card">
+        <div class="db-card-label">Where it lives</div>
+        <div class="db-card-title">Single source of truth, API-accessible</div>
+        <div class="db-card-text">One central system that holds every ready-to-present candidate. No duplicates across spreadsheets, Notion pages, or recruiter heads. Must be queryable by the AI matching tool, the presentation page builder, and the dashboards.</div>
+        <div class="db-card-text"><strong>Strong candidate:</strong> Airtable. We already use it, it has the MCP integration we run on top of, and it supports the field structure we need without custom code. Open to alternatives if someone has a better proposal.</div>
+      </div>
+
+      <div class="db-card">
+        <div class="db-card-label">Field structure</div>
+        <div class="db-card-title">Structured for AI matching</div>
+        <div class="db-card-text">Every candidate record must include the following, machine-readable:</div>
+        <ul>
+          <li><strong>Identity:</strong> Name, location, country, time zone</li>
+          <li><strong>Role tags:</strong> Primary role + adjacent roles (multi-select)</li>
+          <li><strong>Seniority + experience years</strong></li>
+          <li><strong>Salary range:</strong> Confirmed, in USD</li>
+          <li><strong>Availability:</strong> Status (active / paused) + last-confirmed date</li>
+          <li><strong>Assets:</strong> Polished resume URL + intro video URL</li>
+          <li><strong>Tech / tools stack</strong> (multi-select)</li>
+          <li><strong>Language proficiency</strong></li>
+          <li><strong>Source channel + sourced-by</strong></li>
+          <li><strong>Lifecycle status:</strong> Sourced / Polishing / Ready / Placed / Paused / Inactive</li>
+        </ul>
+      </div>
+
+      <div class="db-card">
+        <div class="db-card-label">Access model</div>
+        <div class="db-card-title">Who writes, who reads</div>
+        <ul>
+          <li><strong>Sourcing</strong> — creates the initial record (Sourced status)</li>
+          <li><strong>Candidate Ops</strong> — writes polished assets, confirms availability and salary, promotes records to Ready status (this team owns the database)</li>
+          <li><strong>Recruitment / TAs</strong> — reads only. Matches against the database, builds presentation pages from the records. Cannot edit candidate data directly.</li>
+          <li><strong>Decision Partners</strong> — reads only. Uses match output and interview intelligence to advise the member.</li>
+        </ul>
+      </div>
+
+      <div class="db-card">
+        <div class="db-card-label">Lifecycle</div>
+        <div class="db-card-title">How candidates enter, refresh, exit</div>
+        <ul>
+          <li><strong>Entry:</strong> Only Candidate Ops can promote a record to <em>Ready</em>. Promotion requires all required fields filled and assets attached.</li>
+          <li><strong>Refresh:</strong> Weekly availability + salary check. Records not refreshed in 30 days auto-flag.</li>
+          <li><strong>Decay:</strong> Records not refreshed in 60 days drop to <em>Paused</em>. 90 days → <em>Inactive</em>.</li>
+          <li><strong>Reactivation:</strong> Inactive records can re-enter the line via Candidate Ops only.</li>
+          <li><strong>On placement:</strong> Status flips to <em>Placed</em> with member + start date. Stays in DB for replacement scenarios.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="db-recommendation">
+      <div class="db-recommendation-badge">Recommendation</div>
+      <div class="db-recommendation-text">Build the database in <strong>Airtable</strong> as the v1. Same base across all four workstreams. Same MCP integration we already use. We can layer a custom front-end later if Airtable's UI becomes the bottleneck, but the data model stays portable.</div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Risks</div>
+      <h2 class="section-title">Where this could go sideways</h2>
+      <p class="section-sub">Three risks I've already stress-tested. Each one has a concrete mitigation.</p>
+    </div>
+
+    <div class="risks">
+      <div class="risk-card">
+        <div class="risk-num">01</div>
+        <div class="risk-title">The handoff tax</div>
+        <div class="risk-desc">If handoffs are sloppy, the integration cost eats the efficiency gains. Today one TA owns the candidate end-to-end. That's slow but seamless.</div>
+        <div class="risk-mitigation-label">Mitigation</div>
+        <div class="risk-mitigation">
+          <ul>
+            <li>Documented input / output specs per stage</li>
+            <li>Async-first, single shared system of record</li>
+            <li>Stage SLAs (e.g. Candidate Ops processes in 48h)</li>
+            <li>Weekly pipeline review at the stage level</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">02</div>
+        <div class="risk-title">Losing the power of surfacing</div>
+        <div class="risk-desc">Today we have huge sourcing volume and we surface fast. The safety stock model means a smaller ready-to-present database. We can't lose surfacing speed.</div>
+        <div class="risk-mitigation-label">Mitigation</div>
+        <div class="risk-mitigation">
+          <ul>
+            <li>Continuous feed into safety stock from Sourcing</li>
+            <li>Recruitment gets faster (no availability checks)</li>
+            <li>Assault Team fast-tracks urgent / unique roles</li>
+            <li>Watch metric: time-to-first-presentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">03</div>
+        <div class="risk-title">Can't depend on Jesus to run it</div>
+        <div class="risk-desc">If the system requires a supply chain brain to operate every day, it isn't built right.</div>
+        <div class="risk-mitigation-label">Mitigation</div>
+        <div class="risk-mitigation">
+          <ul>
+            <li>Stage leads own throughput per stage</li>
+            <li>We manage the system, not the requests</li>
+            <li>Narrow scope makes onboarding fast</li>
+            <li>No unicorns required at any seat</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-light); max-width: 100%; padding-left: 0; padding-right: 0;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
+      <div class="section-header">
+        <div class="section-eyebrow">Wednesday Agenda</div>
+        <h2 class="section-title">Questions still open to brainstorm with the team</h2>
+        <p class="section-sub">Grouped by area. None of these need to be solved today, but all of them need to be talked through.</p>
+      </div>
+
+      <div class="questions-grid">
+
+        <div class="q-card">
+          <div class="q-card-label">Org &amp; ownership</div>
+          <div class="q-card-title">How do we staff and lead this?</div>
+          <ul>
+            <li>Who leads each stage?</li>
+            <li>What's the single shared system of record across all four workstreams?</li>
+          </ul>
+        </div>
+
+        <div class="q-card">
+          <div class="q-card-label">Candidate Operations</div>
+          <div class="q-card-title">How fast do we go to automation?</div>
+          <ul>
+            <li>How much of the Candidate Ops work do we automate from day one vs. start manual and automate later?</li>
+          </ul>
+        </div>
+
+        <div class="q-card">
+          <div class="q-card-label">Recruitment / TAs</div>
+          <div class="q-card-title">How do we structure the Pod Leads?</div>
+          <ul>
+            <li>How many Pod Leads / Team Leads do we need? Two? Three?</li>
+            <li>How do we distribute the workload across them?</li>
+          </ul>
+        </div>
+
+        <div class="q-card">
+          <div class="q-card-label">Decision Partners</div>
+          <div class="q-card-title">Who fits, and how do we pay them?</div>
+          <ul>
+            <li>Comp model: sales-style commissions, hybrid, or something else?</li>
+            <li>Are Manuel, Manuela, Feli the right starting bench, or are we missing profiles?</li>
+          </ul>
+        </div>
+
+        <div class="q-card">
+          <div class="q-card-label">The Database</div>
+          <div class="q-card-title">Can interview reports auto-enrich the candidate's profile?</div>
+          <ul>
+            <li>If every interview produces a structured report, can it write back into the candidate's record? Strengths, red flags, communication style, role fit signals. The database compounds in value with every interaction. Big upside, big design question.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div><strong>Sagan Passport</strong> &middot; Internal proposal &middot; May 8, 2026</div>
+    <div style="margin-top: 8px;">Prepared by Jesus Pacheco &middot; <a href="mailto:jesus.p@getsagan.com">jesus.p@getsagan.com</a></div>
+  </footer>
+
+</body>
+</html>

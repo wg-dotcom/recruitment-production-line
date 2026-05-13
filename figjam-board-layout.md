@@ -182,7 +182,7 @@ Four columns, one per workstream. Each column has a status pill at the top, then
   - Build AI tools: matching tool, presentation page builder, interview report creator
 
 **Workstream 4 — Decision Partners** (status: teal "To define")
-- Where we are: Very specific profile. Initial thinking: Account Manager + Pod Lead blend. First names: Manuel, Manuela, Feli (or similar profiles).
+- Where we are: Very specific profile. Initial thinking: Account Manager + Pod Lead blend. First names: Manuel, Manuela, Feli, Miguel (or similar profiles).
 - What's left:
   - Scope the role precisely (primary focus)
   - Identify the right people
@@ -278,7 +278,7 @@ Six grouped sticky note columns (or six cards):
 
 **Decision Partners**
 - Comp model: sales-style commissions, hybrid, or something else?
-- Are Manuel, Manuela, Feli the right starting bench, or are we missing profiles?
+- Are Manuel, Manuela, Feli, Miguel the right starting bench, or are we missing profiles?
 
 **The Database**
 - Can the recruiter's interview report auto-enrich the candidate's profile in the ready-to-present database? If yes, the DB compounds in value with every interaction. Big upside, big design question.

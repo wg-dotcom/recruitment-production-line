@@ -205,7 +205,7 @@ We don't need to finish one stage before starting the next. The four workstreams
 
 ### Workstream 4. Decision Partners / Account Growth — *To define*
 
-**Where we are:** Very specific profile we haven't formalized yet. Initial thinking: a blend of Account Manager + Pod Lead. First names that come to mind internally: **Manuel, Manuela, Feli** (or similar profiles).
+**Where we are:** Very specific profile we haven't formalized yet. Initial thinking: a blend of Account Manager + Pod Lead. First names that come to mind internally: **Manuel, Manuela, Feli, Miguel** (or similar profiles).
 
 **What's left:**
 - Scope the role precisely (this is the primary focus across the whole build)
@@ -325,7 +325,7 @@ Grouped by area. None of these need to be solved today, but all of them need to 
 ### Decision Partners
 
 - Comp model: sales-style commissions, hybrid, or something else?
-- Are Manuel, Manuela, Feli the right starting bench, or are we missing profiles?
+- Are Manuel, Manuela, Feli, Miguel the right starting bench, or are we missing profiles?
 
 ### The Database
 

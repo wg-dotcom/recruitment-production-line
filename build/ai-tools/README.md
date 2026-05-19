@@ -37,7 +37,7 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 | 07 | **Intro Video Script Generator** | Stage 2 | [`07-video-script.md`](./07-video-script.md) | Improves video quality. Important but not blocking. |
 | 08 | **Warm-Keep Cadence** | Stage 2 | [`08-warm-keep.md`](./08-warm-keep.md) | Re-engagement automation. Tier-3 priority. |
 | 09 | **Interview Prep Generator** | Stage 3 | [`09-interview-prep.md`](./09-interview-prep.md) | Coaches candidates before member interviews. |
-| 10 | **Demand Signal Analyzer** | Stage 4 → Sourcing | [`10-demand-signal-analyzer.md`](./10-demand-signal-analyzer.md) | Listens to Granola transcripts, extracts forward-looking hiring intent for Sourcing. |
+| 10 | **Demand Signal Analyzer** | Stage 4 → Sourcing | [`10-demand-signal-analyzer.md`](./10-demand-signal-analyzer.md) | Listens to Granola transcripts, extracts forward-looking hiring intent. Note: v1 schema has no Demand Signals table — this tool writes to Slack / Doc / Granola tags until v2. Decide destination before building. |
 
 ### Phase 4 · System intelligence (Weeks 8+)
 

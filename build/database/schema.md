@@ -193,10 +193,24 @@ Team identity is captured as plain text on records (`sourced_by`, `assigned_ta`,
 
 - [ ] Should `tech_stack` and `languages` use controlled vocabularies (multi-select) or free-text + AI normalization?
 - [ ] Field-level access (e.g. hide `salary_*` from non-Candidate Ops) — Airtable handles this at the interface level
-- [ ] Where do demand signals from Decision Partners live in v1? Slack thread? Google Doc? Granola tags? Need to pick something or signals get lost.
-- [ ] Where does sourcing pipeline target tracking live in v1? Spreadsheet? Notion page? Or do we just trust Sourcing leads to track informally?
 - [ ] How do we handle replacement candidates (Placed → re-Ready)? Likely a `replacement_for` link field on a new HR record.
 - [ ] Currency. All USD for now. If we onboard non-US members later, add `currency` field with conversion.
+
+## Decisions locked
+
+- **Demand signals (Stage 4 → Stage 1 feedback loop) live in Slack** for v1. Dedicated channel: `#sagan-demand-signals`. Decision Partners post one-line predictions in a structured format:
+
+  ```
+  Member: <Member Name>
+  Role: <Role family>
+  Expected: <Quarter or month>
+  Confidence: High / Medium / Low
+  Source: Confirmed roadmap / Inferred / Granola transcript link
+  ```
+
+  Cheap to start. Easy to migrate to an Airtable table in v2 once we see the volume. Until then, Sourcing leads watch the channel.
+
+- **Sourcing pipeline targets are not formally tracked in v1.** Sourcing leads operate on judgment + visible gaps in the Candidates table (filtering by `primary_role` + `lifecycle_status = Ready`). Revisit if it becomes a problem.
 
 ---
 

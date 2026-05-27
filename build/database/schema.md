@@ -4,11 +4,9 @@ This is the v1 schema for the Sagan recruitment production line. Built in Airtab
 
 **Status:** Draft for Zaki review. Field names and types are firm. Field-level defaults and automations marked `[TBD]` are open for discussion.
 
-**v1 scope decision:** Team Members, Sourcing Strategy, and Demand Signals are **not modeled as tables** in v1. Team identity is captured as text (name + email) on records that need it. Demand signals and sourcing strategy live outside Airtable for now (Slack threads, Google Doc, Granola). Revisit in v2 once the line is producing.
-
 ---
 
-## Tables (4 total)
+## Tables (7 total)
 
 | # | Table | Purpose | Owner |
 |---|---|---|---|
@@ -16,6 +14,9 @@ This is the v1 schema for the Sagan recruitment production line. Built in Airtab
 | 2 | **Hiring Requests** | Open member roles in flight (the JDs / orders) | Recruitment + Decision Partners |
 | 3 | **Members** | Sagan customers (companies) | Decision Partners |
 | 4 | **Interview Reports** | Structured output of every TA interview, feeds back into Candidates | Recruitment |
+| 5 | **Demand Signals** | Forward-looking hiring intent from member conversations, feeds Sourcing | Decision Partners |
+| 6 | **Sourcing Strategy** | Pipeline targets per role family | Sourcing |
+| 7 | **Team Members** | Internal Sagan roster, role, stage | Ops |
 
 ---
 
@@ -48,7 +49,7 @@ The single source of truth for every person we could present. This is the safety
 | `resume_url` | URL | Yes for Ready | Pointing to polished version |
 | `video_url` | URL | Yes for Ready | Pointing to badass intro video |
 | `source_channel` | Single-select | Yes | LinkedIn / Referral / Inbound / Outbound / etc. |
-| `sourced_by` | Single-line text | Yes | Name of sourcer (text, not a link) |
+| `sourced_by` | Link to Team Members | Yes | |
 | `sourced_date` | Date | Yes (auto on create) | |
 | `ready_date` | Date | Yes when promoted to Ready | Set by Candidate Ops |
 | `days_as_ready` | Formula | Auto | `TODAY() - ready_date` |
@@ -97,8 +98,8 @@ Every active role request from a member. The "order" entering the production lin
 | `time_to_first_presentation_hours` | Formula | Auto | **Marquee metric.** `(first_presentation_date - date_opened) * 24` |
 | `placed_date` | Date | No | |
 | `time_to_placement_days` | Formula | Auto | |
-| `assigned_ta` | Single-line text | Yes | Name of assigned TA |
-| `assigned_decision_partner` | Single-line text | Yes | Name of assigned Decision Partner |
+| `assigned_ta` | Link to Team Members | Yes | |
+| `assigned_decision_partner` | Link to Team Members | Yes | |
 | `candidates_presented` | Link to Candidates (many-to-many) | No | Up to 10 |
 | `final_hire` | Link to Candidates (single) | No | The one who got placed |
 | `presentation_url` | URL | No | Written by Presentation Page Builder tool |
@@ -121,7 +122,7 @@ Sagan customers. The accounts.
 | `primary_contact_email` | Email | Yes | |
 | `primary_contact_phone` | Phone | No | |
 | `tier` | Single-select | Yes | `White Glove` / `Passport` / `Core` / `TNT` |
-| `account_owner` | Single-line text | Yes | Name of Decision Partner |
+| `account_owner` | Link to Team Members | Yes | The Decision Partner |
 | `hiring_roadmap` | Long text | No | Maintained by Decision Partner |
 | `open_hrs` | Link to Hiring Requests | No | Many |
 | `total_placements` | Rollup | Auto | Count of Placed status HRs linked to this member |
@@ -143,7 +144,7 @@ Every interview a TA runs produces one record. This is the table that feeds the 
 | `date` | Date | Yes | |
 | `candidate` | Link to Candidates | Yes | |
 | `hiring_request` | Link to Hiring Requests | Yes | |
-| `interviewer` | Single-line text | Yes | Name of TA |
+| `interviewer` | Link to Team Members | Yes | The TA |
 | `interview_round` | Single-select | Yes | `1st` / `2nd` / `Final` / `Member-led` |
 | `interview_type` | Single-select | Yes | `Screening` / `Technical` / `Behavioral` / `Cultural Fit` |
 | `strengths_observed` | Long text | Yes | |
@@ -161,19 +162,83 @@ Every interview a TA runs produces one record. This is the table that feeds the 
 
 ---
 
+## Table 5 · Demand Signals
+
+Forward-looking hiring intent captured by Decision Partners. The feedback loop into Sourcing.
+
+| Field | Type | Required? | Notes |
+|---|---|---|---|
+| `signal_id` | Autonumber | Yes (auto) | |
+| `date_captured` | Date | Yes | |
+| `member` | Link to Members | Yes | |
+| `decision_partner` | Link to Team Members | Yes | |
+| `role_anticipated` | Single-select | Yes | Same controlled list as Candidates.primary_role |
+| `expected_open_date` | Date | No | When member is likely to formalize the HR |
+| `confidence` | Single-select | Yes | `High` / `Medium` / `Low` |
+| `source` | Single-select | Yes | `Confirmed roadmap` / `Inferred from conversation` / `Granola transcript` |
+| `granola_link` | URL | No | Direct link to source transcript if applicable |
+| `materialized_hr` | Link to Hiring Requests | No | Filled when signal converts to actual HR |
+| `linked_sourcing_strategy` | Link to Sourcing Strategy | No | Which pipeline this signal should reinforce |
+| `notes` | Long text | No | |
+| `created_at` | Created time | Auto | |
+
+**Capture convenience:** Decision Partners can post signals to Slack `#sagan-demand-signals` in a structured one-liner, and Tool 10 (Demand Signal Analyzer) writes them into this table. The table is the system of record; Slack is just a low-friction entry point.
+
+---
+
+## Table 6 · Sourcing Strategy
+
+Per role family: how deep should the pipeline be, and what's the current state?
+
+| Field | Type | Required? | Notes |
+|---|---|---|---|
+| `strategy_id` | Autonumber | Yes (auto) | |
+| `role_family` | Single-select | Yes | Same controlled list |
+| `target_ready_count` | Number | Yes | How many Ready candidates we want in safety stock |
+| `current_ready_count` | Rollup | Auto | Count of Candidates with primary_role match + lifecycle_status = Ready |
+| `coverage_ratio` | Formula | Auto | `current_ready_count / target_ready_count` |
+| `priority_members` | Link to Members | No | Who needs this role family most |
+| `active_demand_signals` | Link to Demand Signals | No | Linked from Demand Signals table |
+| `owner` | Link to Team Members | Yes | Sourcing lead for this family |
+| `last_reviewed` | Date | Yes | |
+| `notes` | Long text | No | |
+
+---
+
+## Table 7 · Team Members
+
+Internal Sagan roster.
+
+| Field | Type | Required? | Notes |
+|---|---|---|---|
+| `member_id` | Autonumber | Yes (auto) | |
+| `full_name` | Single-line text | Yes | |
+| `email` | Email | Yes | Sagan email |
+| `slack_handle` | Single-line text | No | |
+| `stage_role` | Single-select | Yes | `Sourcer` / `Candidate Ops` / `TA` / `Pod Lead` / `Decision Partner` / `Stage Lead` / `System Owner` |
+| `stage_number` | Single-select | Yes | `1` / `2` / `3` / `4` / `Cross-stage` |
+| `active` | Checkbox | Yes | |
+| `start_date` | Date | Yes | |
+| `manager` | Link to Team Members | No | Self-referential |
+| `notes` | Long text | No | |
+
+---
+
 ## Relationships diagram (text version)
 
 ```
 Members (1) ──< (many) Hiring Requests >── (many) Candidates
-                            │                        │
-                            ▼                        ▼
-                  Interview Reports (many) ──────────┘
+   │                       │                        │
+   │                       │                        │
+   ▼                       ▼                        ▼
+Demand Signals (1)──< Sourcing Strategy >──< Team Members
+                            │
+                            ▼
+                   Interview Reports (many)
                             │
                             ▼
                   (auto-enrich → Candidates)
 ```
-
-Team identity is captured as plain text on records (`sourced_by`, `assigned_ta`, `assigned_decision_partner`, `interviewer`, `account_owner`) instead of as links to a Team Members table.
 
 ---
 
@@ -181,10 +246,10 @@ Team identity is captured as plain text on records (`sourced_by`, `assigned_ta`,
 
 | Role | Read | Write | Notes |
 |---|---|---|---|
-| Sourcing | All tables | `Candidates` (create only, status = Sourced) | Cannot modify Ready records |
+| Sourcing | All tables | `Candidates` (create only, status = Sourced), `Sourcing Strategy` | Cannot modify Ready records |
 | Candidate Ops | All tables | `Candidates` (full), `Interview Reports` (read-only) | **Owns** the database |
 | Recruitment / TA | All tables | `Hiring Requests`, `Interview Reports` | Read-only on `Candidates` |
-| Decision Partner | All tables | `Members`, `Hiring Requests` (assigned only) | Read-only on `Candidates` |
+| Decision Partner | All tables | `Members`, `Demand Signals`, `Hiring Requests` (assigned only) | Read-only on `Candidates` |
 | System Owner | Everything | Everything | Jesus + Stage Leads |
 
 ---
@@ -193,32 +258,17 @@ Team identity is captured as plain text on records (`sourced_by`, `assigned_ta`,
 
 - [ ] Should `tech_stack` and `languages` use controlled vocabularies (multi-select) or free-text + AI normalization?
 - [ ] Field-level access (e.g. hide `salary_*` from non-Candidate Ops) — Airtable handles this at the interface level
+- [ ] Do we want a separate `Activities` log table for stage-level metric tracking, or rollups + formulas are enough?
 - [ ] How do we handle replacement candidates (Placed → re-Ready)? Likely a `replacement_for` link field on a new HR record.
 - [ ] Currency. All USD for now. If we onboard non-US members later, add `currency` field with conversion.
-
-## Decisions locked
-
-- **Demand signals (Stage 4 → Stage 1 feedback loop) live in Slack** for v1. Dedicated channel: `#sagan-demand-signals`. Decision Partners post one-line predictions in a structured format:
-
-  ```
-  Member: <Member Name>
-  Role: <Role family>
-  Expected: <Quarter or month>
-  Confidence: High / Medium / Low
-  Source: Confirmed roadmap / Inferred / Granola transcript link
-  ```
-
-  Cheap to start. Easy to migrate to an Airtable table in v2 once we see the volume. Until then, Sourcing leads watch the channel.
-
-- **Sourcing pipeline targets are not formally tracked in v1.** Sourcing leads operate on judgment + visible gaps in the Candidates table (filtering by `primary_role` + `lifecycle_status = Ready`). Revisit if it becomes a problem.
 
 ---
 
 ## v1 build order (for Zaki / setup)
 
-1. **Day 1:** Build all 4 tables with fields. Skip automations.
+1. **Day 1:** Build all 7 tables with fields. Skip automations.
 2. **Day 1:** Load 20 dummy Candidates spanning all lifecycle statuses, 5 dummy Members, 10 dummy HRs.
-3. **Day 2:** Wire up rollups and formulas (`time_to_first_presentation_hours`, `total_placements`, etc.).
+3. **Day 2:** Wire up rollups and formulas (`time_to_first_presentation_hours`, `current_ready_count`, etc.).
 4. **Day 2:** Build Airtable Interfaces for each role's view (Sourcing, Candidate Ops, TA, Decision Partner).
 5. **Day 3:** Wire up automations: status-change validations, decay flags, interview report → auto-enrich.
 6. **Day 3:** Connect MCP to the base. Confirm read/write from a Claude session.

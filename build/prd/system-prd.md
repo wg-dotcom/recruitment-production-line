@@ -114,7 +114,7 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 | 5.1 | Understand each member's hiring roadmap and operations | In their head, scattered notes, Granola | System: Member roadmap field |
 | 5.2 | Review the candidate shortlist + interview intel before advising the member | Manual, asks the TA | System: HR view with linked candidates + reports |
 | 5.3 | Advise the member on which candidate to hire and why | Calls, relationship | — |
-| 5.4 | Capture forward-looking demand signals from member conversations | Lost unless remembered | **Tool 10 · Demand Signal Analyzer** → Slack `#sagan-demand-signals` |
+| 5.4 | Capture forward-looking demand signals from member conversations | Lost unless remembered | **Tool 10 · Demand Signal Analyzer** → Demand Signals table |
 | 5.5 | Own account expansion + retention (spot the next hire, grow the account) | Relationship-driven, no system support | System: Member + open HRs view |
 | 5.6 | See account health at a glance (placements, MRR, open roles) | Multiple dashboards / manual | System: Member dashboard |
 
@@ -157,7 +157,6 @@ Recommendation: **Airtable as v1.** Already in use, MCP integration ready, no cu
 ## What we're explicitly NOT building in v1
 
 - A custom front-end app (Airtable Interfaces are enough for v1)
-- A Team Members / Sourcing Strategy / Demand Signals table (text fields + Slack cover these for now)
 - Member-facing logins (members receive presentation pages as links, they don't log into the system)
 - Automated sourcing (Stage 1 stays human-led in v1)
 

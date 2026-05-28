@@ -12,7 +12,7 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 
 ---
 
-## Priority list (15 tools)
+## Priority list (16 tools)
 
 ### Phase 1 · Make the line work end-to-end (Weeks 1–3)
 
@@ -41,6 +41,7 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 | 09 | **Interview Prep Generator** | Stage 3 | [`09-interview-prep.md`](./09-interview-prep.md) | Coaches candidates before member interviews. |
 | 10 | **Demand Signal Analyzer** | Stage 4 → Sourcing | [`10-demand-signal-analyzer.md`](./10-demand-signal-analyzer.md) | Reads Granola transcripts + Member roadmaps (hiring + AI agents), writes structured forward-looking hires to Demand Signals table → flags Sourcing. |
 | 14 | **AP Meeting Briefing + Roadmap Updater (NEW)** | Stage 4 | [`14-ap-briefing.md`](./14-ap-briefing.md) | Generates a briefing doc after every AP↔member meeting. Updates hiring roadmap + AI agents roadmap. Posts to Member Portal. |
+| 16 | **Member Intelligence Enricher (NEW)** | Stage 4 (pre-onboarding) | [`16-member-intelligence-enricher.md`](./16-member-intelligence-enricher.md) | Pulls company info, sales transcripts, and LinkedIn signals to build a deep Member Brief the AP uses for the onboarding call. First impression matters. |
 
 ### Phase 4 · System intelligence (Weeks 8+)
 

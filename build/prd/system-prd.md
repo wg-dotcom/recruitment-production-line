@@ -113,7 +113,9 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 
 | # | The Decision Partner should be able to... | How it's done today | Supporting AI tool |
 |---|---|---|---|
-| 5.1 | Understand each member's hiring roadmap + AI agents roadmap and operations | In their head, scattered notes, Granola | System: Member roadmap fields (hiring + AI agents) |
+| 5.0 | Walk into the onboarding call deeply prepared on the member (company, leaders, sales call insights, anticipated needs) | Quick website scan + memory | **Tool 16 · Member Intelligence Enricher** (runs 24h before the call) |
+| 5.0b | Run the onboarding call to a structured agenda that captures hiring + AI agents roadmap, culture, working relationship | Freestyle, varies by AP | [Onboarding Call Structure](../ops/ap-onboarding-call-structure.md) |
+| 5.1 | Understand each member's hiring roadmap + AI agents roadmap and operations | In their head, scattered notes, Granola | System: Member roadmap fields (hiring + AI agents) + visual roadmap view in Member Portal |
 | 5.2 | Review the candidate shortlist + interview intel before advising the member | Manual, asks the TA | System: HR view with linked candidates + reports |
 | 5.3 | Advise the member on which candidate to hire and why | Calls, relationship | — |
 | 5.4 | Capture forward-looking demand signals from member conversations | Lost unless remembered | **Tool 10 · Demand Signal Analyzer** → Demand Signals table |

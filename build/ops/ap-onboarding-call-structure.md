@@ -1,8 +1,8 @@
 # Account Partner Onboarding Call — v2
 
-**Total length:** 60–75 min
+**Total length:** up to 45 min
 
-The 45-min version was a kickoff. This is a **partnership intake**. It's longer because the relationship that comes out of it is worth a 12-month retention curve, not a one-time placement.
+This isn't a kickoff. It's a **partnership intake**. The relationship that comes out of it is worth a 12-month retention curve, not a one-time placement. The discipline is to make every minute count — depth, not length.
 
 ---
 
@@ -11,7 +11,7 @@ The 45-min version was a kickoff. This is a **partnership intake**. It's longer 
 | v1 (still vendor-flavored) | v2 (real partner) |
 |---|---|
 | Bond → role discovery → budget → process | **Bond → their story → the business → the team → role → budget → roadmap** |
-| First hiring question at minute 3 | **First hiring question at minute 30–35** |
+| First hiring question at minute 3 | **First hiring question at minute 20+** |
 | AP gets the brief, leaves | **AP knows the founder's "why," not just the JD** |
 | Member feels: efficient | **Member feels: heard** |
 
@@ -19,7 +19,7 @@ The AP's job in the first 30 minutes is not to gather info. **It's to make the f
 
 ---
 
-## Block 1 — Real Opening (5–8 min, sometimes 10)
+## Block 1 — Real Opening (4–6 min)
 
 **Goal:** not "warm-up." Real human contact.
 
@@ -28,7 +28,7 @@ The AP's job in the first 30 minutes is not to gather info. **It's to make the f
 - AP references one specific personal thing from the briefing (the kid mentioned in the sales call, the cowboys tee, the recent press hit, the marathon they ran)
 - AP shares something equally personal back, unprompted. *"I'm calling from Mendoza, just got back from a rescue on the mountain Wednesday — had to find a friend who got lost in a storm. So you're getting me on day three of recovery."* Specific. Human. Real.
 - Riff on whatever comes up. Don't rush to the agenda.
-- Let the founder set the pace. Some founders are crisp; the bonding stays light. Some founders are open; let it go 10–15 min.
+- Let the founder set the pace. Some founders are crisp; the bonding stays light. Some founders are open; give them a few extra minutes — but recover the time in later blocks.
 
 **Rule:** do not say "let's get into it" until the founder has laughed once or shared one thing about themselves they didn't have to share. That's the signal it's safe to move forward.
 
@@ -40,7 +40,7 @@ This single sentence resets the founder's expectations. Most of them have never 
 
 ---
 
-## Block 2 — Their Story (12–18 min)
+## Block 2 — Their Story (8–12 min)
 
 **Goal:** understand the founder. Not the company yet. **The person.**
 
@@ -64,7 +64,7 @@ These are not recruitment questions. They are **founder-respect questions**. Mos
 
 ---
 
-## Block 3 — The Business Itself (10–15 min)
+## Block 3 — The Business Itself (7–10 min)
 
 **Goal:** understand the company without referencing hiring once.
 
@@ -88,7 +88,7 @@ That last question is the bridge. It naturally pulls toward *"what do you need t
 
 ---
 
-## Block 4 — The Team Today (8–10 min)
+## Block 4 — The Team Today (5–7 min)
 
 **Goal:** understand the org as it exists. **No hiring talk yet.**
 
@@ -108,7 +108,7 @@ When they get close to articulating a need, your job is to **slow down and liste
 
 ---
 
-## Block 5 — Personality, Roadmap, Growth Lever (8–10 min)
+## Block 5 — Personality, Roadmap, Growth Lever (6–8 min)
 
 **This is where the AP earns the consultant title.**
 
@@ -124,7 +124,7 @@ That moment — where the AP shows up with a hypothesis the founder hadn't artic
 
 ---
 
-## Block 6 — Co-Design + Close (5–7 min)
+## Block 6 — Co-Design + Close (3–5 min)
 
 **Goal:** leave the founder feeling like they made a friend who's now their growth partner, not someone who just sold them a service.
 
@@ -162,7 +162,7 @@ This keeps the onboarding call **pure**: bonding, story, business, team, roadmap
 
 The blocks above are a guide, **not a script**.
 
-- If the founder is crisp and business-only, run the call faster (45–55 min). They'll signal it.
+- If the founder is crisp and business-only, run the call faster (30–35 min). They'll signal it.
 - If the founder opens up in block 1 and starts telling you about their kid's soccer game, **let them**. The bond is the business. Spend the time.
 - If they keep pulling toward *"so when can you send candidates,"* the AP gently redirects: *"I'm getting there, but I want to do this right. Five more minutes on the business, then we go deep on the hire. Better candidates come out of better context."*
 - If the founder seems impatient about the long format, the AP can compress block 2 and block 3 into 8 min total. **The order is more important than the time.**

@@ -103,7 +103,7 @@ Based on Acme's stage + similar Sagan members:
 - A roadmap hypothesis ready if Sarah doesn't have one
 
 ## What to NOT do
-- Don't lead with the SDR hire. Block 5 is where that happens, minute 30+.
+- Don't lead with the SDR hire. Block 5 is where that happens, minute 20+.
 - Don't promise "3 candidates in a week" early — let Sarah ask, then commit confidently.
 - Don't reference the sales transcripts directly ("you said X in the sales call"). Use the signals; don't show your homework.
 ```

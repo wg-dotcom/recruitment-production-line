@@ -67,6 +67,7 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 | 2.4 | Promote a candidate to "Ready" (into the safety stock) once their package is complete | No formal gate today — candidates just get presented ad hoc | System: status validation on promotion to Ready |
 | 2.5 | Keep candidates warm between opportunities so they don't go cold | Sporadic, manual, often forgotten | **Tool 08 · Warm-Keep Cadence** |
 | 2.6 | Weekly: re-confirm availability of all Ready candidates so the database stays fresh | Not done systematically today — DB rots | **Tool 04 · Availability Bot** (scheduled) |
+| 2.7 | When automated outreach fails (30+ days no refresh), **personally reach out** to the candidate (WhatsApp/call/email) and log the outcome | Doesn't happen today — DB just rots | **Outreach queue** in Database UI (filtered to decay_color = Red, manual_outreach_status = Open). Slack DM notification. AI-drafted personalized email starter. |
 
 **Output of this role:** The ready-to-present database. Records at `lifecycle_status = Ready` with polished resume, video, confirmed availability + salary, role tags. **This team owns the database.**
 

@@ -10,11 +10,12 @@
 
 After every meeting an Account Partner has with a member, this tool:
 
-1. Generates a **structured briefing doc** from the meeting transcript (decisions, open items, signals, next steps).
+1. Generates a **structured briefing doc** from the meeting transcript. **Relationship-first, not hiring-first** — the doc captures the founder's story, what energizes them, what drains them, business mechanics, team dynamics, and the roadmap. Tone matches the v2 onboarding call structure ([see structure doc](../ops/ap-onboarding-call-structure.md)).
 2. **Updates the member's hiring roadmap** with anything new mentioned about future hires.
 3. **Updates the member's AI agents roadmap** with anything new about planned AI builds.
 4. **Posts the briefing into the Member Portal** so the member can see what was discussed.
 5. **Surfaces new demand signals** to Tool 10 (which writes them into the Demand Signals table → flags Sourcing).
+6. **For onboarding calls specifically:** generates the **24-hour commitment doc** the AP promised in Block 6 — the founder's "why" in their own words, the 90-day plan for hire #1, the strategic frame for hires #2 and #3.
 
 ## Why it matters
 

@@ -8,17 +8,21 @@
 
 ## What it does
 
-Before the AP's first call with a new member, this tool produces a **deep Member Brief** the AP uses to walk in prepared. Pulls signal from three sources:
+Before the AP's first call with a new member, this tool produces a **deep Member Brief** the AP uses to walk in prepared.
 
-1. **The internet** — company website, recent news, LinkedIn (company + key leaders), industry context, hiring signals (job posts on their site / LinkedIn).
-2. **Sales call transcripts** — every Granola transcript from the sales process (discovery, demo, close).
-3. **Internal Sagan context** — patterns from similar members in our base.
+**Critical framing:** the brief is built for a **relationship-first onboarding call** (see [`../ops/ap-onboarding-call-structure.md`](../ops/ap-onboarding-call-structure.md)). The AP's first 30 minutes are about bonding, founder story, business, and team — **not hiring**. The brief has to load up on personal hooks and founder context, not just role intel.
 
-Output: a structured brief that turns the AP into a near-expert on the member before the call starts.
+Pulls signal from three sources:
+
+1. **The internet** — company website, recent news, LinkedIn (company + key leaders), industry context, hiring signals, founder's public footprint (podcasts, press, social, marathons, side projects, anything personal that gives the AP a real opener).
+2. **Sales call transcripts** — every Granola transcript from the sales process (discovery, demo, close). Personal mentions matter as much as business mentions.
+3. **Internal Sagan context** — patterns from similar members in our base for the roadmap hypothesis.
+
+Output: a structured brief that turns the AP into a near-expert on the **person**, not just the company, before the call starts.
 
 ## Why it matters
 
-The onboarding call is the **first impression** of the partnership. Today, APs walk in with whatever's in their head + a quick scan of the member's website. That's not enough. This tool gives them a deep, structured brief so the call feels like Sagan has *already* invested in the relationship. Trust starts at minute one.
+The onboarding call is the **first impression** of the partnership. Today, APs walk in with whatever's in their head + a quick scan of the member's website. That's not enough. This tool gives them a deep, structured brief so the call feels like Sagan has *already* invested in the relationship. **Trust starts at minute one with a specific, personal reference — not a generic warm-up.**
 
 ---
 
@@ -49,53 +53,59 @@ A structured Member Brief, written to a document (Markdown → published in the 
 ```
 # Member Brief — Acme Corp — for onboarding call May 15
 
-## Snapshot
-- B2B SaaS, sales engagement platform
-- Series A, $14M raised, 50 employees, HQ Austin
+## Personal hooks for Block 1 (Real Opening)
+Pick one. Don't list them — pick the one that lands best.
+
+- **Sarah ran the NYC marathon in November** (mentioned briefly in sales discovery). 3:47 finish.
+- **Tom is a Cowboys fan** — saw a Cowboys background on his Zoom in the demo call.
+- **Acme was featured in TechCrunch last Thursday** about their Series A. Big deal for them.
+- **Sarah's son started kindergarten this fall** — mentioned in sales close call as the reason she wanted to wrap quickly.
+
+## Founder story signal (Block 2 prep)
+- **Sarah Chen, COO** — joined Acme as 4th hire, founder Mark Aldea kept her from her Salesforce days.
+- Prior: 6 years at Salesforce in ops, MIT '15 (operations research), did a stint at a YC pre-seed that failed in 2020.
+- Mark Aldea (CEO) is on the call but Sarah was the one Sagan sold to — Mark trusts her on hiring decisions.
+- Public clue: Sarah's most recent LinkedIn post talked about "the difference between a great hire and a perfect resume." That's a hint about how she thinks.
+
+## The business (Block 3 prep)
+- B2B SaaS, sales engagement platform (Salesloft / Outreach competitor, smaller niche)
+- Series A, $14M raised April 2026, 50 employees, HQ Austin
 - Founded 2021, growing 80% YoY
+- They're growing fastest in mid-market healthcare verticals (specific niche)
+- Unfair advantage according to sales transcripts: "we're the only platform built for regulated industries"
 
-## Recent signals (last 90 days)
-- Hired new VP Sales (Mark Stein) from Outreach in April
-- Posted 6 SDR roles on LinkedIn last 30 days
-- Launched Acme AI (LLM-powered sales coach) in March
-- Likely scaling team to support product expansion
+## Team today (Block 4 prep)
+- LinkedIn shows ~50 people. Recent hires: new VP Sales (Mark Stein, ex-Outreach), 6 SDRs in last 30 days
+- Sarah's likely pain point: she can hire AEs but SDRs are killing her bandwidth
+- Tom Riley (Head of Ops) joined 8 months ago — ex-McKinsey — likely owns vendor selection
 
-## Leadership on the call
-- **Sarah Chen, COO** — ex-Salesforce ops, MIT '15. Speaks fast, data-driven. LinkedIn shows strong "outcomes" orientation. Likely the decision-maker on operational hires.
-- **Tom Riley, Head of Ops** — joined 8 months ago, ex-McKinsey. Will likely focus on process and tools questions.
+## Roadmap hypothesis (Block 5 prep — surface if founder doesn't)
+Based on Acme's stage + similar Sagan members:
+- **Hire #1 (now):** SDR (LATAM, Spanish + English, healthcare context a plus)
+- **Hire #2 (Q3):** CSR / onboarding specialist (their last 3 customers churned at onboarding per sales transcript)
+- **Hire #3 (Q4):** Sales Ops / RevOps to scale the SDR team
+- **AI agent build (possible):** prospect research agent — they mentioned manually building lists, this is gold for an AI build
 
-## Sales call insights
-- **Pain points raised:** "Our SDR onboarding is 6 weeks too slow" / "We can't find Spanish-speakers fast enough" / "We're spending too much on agencies"
-- **Budget hints:** mentioned "$2k/month range" for SDRs in demo
+## Sales call insights (verbatim quotes worth referencing)
+- **Pain points:** "Our SDR onboarding is 6 weeks too slow" / "We can't find Spanish-speakers fast enough" / "We're spending too much on agencies"
+- **Budget signal:** mentioned "$2k/month range" for SDRs in demo
 - **Decision criteria:** "Quality over quantity. We don't want resume floods."
-- **Quotes worth remembering:** "If you can show me 3 great candidates in a week, we'll trial it"
+- **The locker line:** "If you can show me 3 great candidates in a week, we'll trial it" — but the v2 call goal is to make her trust the relationship, not just hit this transactional bar
 
-## Industry context
+## Industry context (for credibility moments)
 - Sales engagement space is consolidating (Salesloft + Drift, Outreach IPO delayed)
-- Competitors hiring aggressively for senior SDRs
-- LATAM talent is increasingly attractive for English-fluency + cost balance
-- Talent market: SDR salaries in LATAM up 12% YoY
+- LATAM talent: SDR salaries up 12% YoY, healthcare-vertical familiarity is rare
+- The "regulated industries" angle Acme owns is genuinely unique
 
-## Anticipated needs (based on similar Sagan members)
-- 4–8 SDRs over next 6 months
-- 1 CSR / onboarding specialist
-- Possibly a sales ops / RevOps role mid-year
-- AI agents: prospect research, email personalization
+## What this AP needs to bring personally
+- One thing about you the founder doesn't already know. Be specific. Be human.
+- A 24-hour commitment doc plan ready to mention in Block 6
+- A roadmap hypothesis ready if Sarah doesn't have one
 
-## Recommended opening
-"Sarah, congrats on the Mark Stein hire — sales engagement is a hot space right now. Before we get into your roadmap, walk me through what's working and what's not with your current SDR motion."
-
-## Gaps to confirm in the call
-- [ ] Confirm budget range (sales call hint vs. actual)
-- [ ] Confirm time zone preferences (LATAM vs. US hours)
-- [ ] Confirm decision-making process (who signs off on hires)
-- [ ] Understand the Acme AI roadmap and whether AI agents are in scope
-- [ ] Spanish-speaker requirement — hard requirement or nice-to-have?
-
-## Questions worth asking
-1. "What does success look like at the 6-month mark of working together?"
-2. "Tell me about the last great hire you made. What did you love about how it went?"
-3. "What's the one thing you're worried we'll get wrong?"
+## What to NOT do
+- Don't lead with the SDR hire. Block 5 is where that happens, minute 30+.
+- Don't promise "3 candidates in a week" early — let Sarah ask, then commit confidently.
+- Don't reference the sales transcripts directly ("you said X in the sales call"). Use the signals; don't show your homework.
 ```
 
 ---

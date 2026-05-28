@@ -83,6 +83,58 @@
     .site-footer { background: var(--dark); color: var(--on-dark-mid); padding: 32px 24px; text-align: center; font-size: 13px; }
     .site-footer strong { color: var(--on-dark); }
 
+    /* Deep-dive section (under Role 5) */
+    .deepdive { background: var(--bg-light); border-radius: var(--radius); padding: 30px 32px; margin: 24px 0 44px; border: 1px solid var(--border); }
+    .deepdive-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); margin-bottom: 8px; }
+    .deepdive-title { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 14px; }
+    .deepdive-intro { font-size: 14px; color: var(--text-mid); line-height: 1.65; margin-bottom: 20px; }
+    .deepdive-intro strong { color: var(--text-primary); }
+
+    /* Philosophy shift table */
+    .phil-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 10px; overflow: hidden; margin-bottom: 24px; border: 1px solid var(--border); }
+    .phil-table th { background: var(--dark); color: var(--on-dark); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-align: left; padding: 11px 16px; }
+    .phil-table th.v2 { background: var(--primary); }
+    .phil-table td { padding: 10px 16px; font-size: 13px; color: var(--text-mid); border-top: 1px solid var(--border); }
+    .phil-table td.v2-col { background: rgba(9,58,62,0.04); color: var(--text-primary); font-weight: 600; }
+
+    /* Block list */
+    .blocks { display: flex; flex-direction: column; gap: 12px; }
+    .block-item { background: var(--bg-card); border-radius: 10px; padding: 14px 18px; border-left: 4px solid var(--primary); }
+    .block-item .b-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 6px; }
+    .block-item .b-name { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: var(--text-primary); }
+    .block-item .b-time { font-size: 11px; color: var(--text-light); font-weight: 600; }
+    .block-item .b-desc { font-size: 13px; color: var(--text-mid); line-height: 1.55; }
+    .block-item.omitted { border-left-color: var(--text-light); opacity: 0.75; }
+    .block-item.omitted .b-name { text-decoration: line-through; color: var(--text-light); }
+
+    /* Brief structure */
+    .brief-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 18px; }
+    .brief-card { background: var(--bg-card); border-radius: 10px; padding: 14px 16px; border: 1px solid var(--border); }
+    .brief-card-label { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--highlight); margin-bottom: 6px; }
+    .brief-card-text { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+
+    /* Roadmap (Option A — two-track quarterly) */
+    .rm-legend { display: flex; gap: 18px; margin-bottom: 14px; flex-wrap: wrap; font-size: 12px; color: var(--text-mid); }
+    .rm-legend .ld { width: 10px; height: 10px; border-radius: 3px; display: inline-block; margin-right: 6px; vertical-align: middle; }
+    .rm-grid { background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border); padding: 18px; }
+    .rm-header { display: grid; grid-template-columns: 110px repeat(4, 1fr); gap: 10px; padding-bottom: 12px; border-bottom: 2px solid var(--border); margin-bottom: 12px; }
+    .rm-qlabel { font-family: var(--font-display); font-size: 14px; font-weight: 600; text-align: center; color: var(--primary); padding: 6px; background: var(--bg-light); border-radius: 6px; }
+    .rm-tlabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); display: flex; align-items: center; padding-left: 4px; }
+    .rm-row { display: grid; grid-template-columns: 110px repeat(4, 1fr); gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); align-items: stretch; }
+    .rm-row:last-child { border-bottom: none; }
+    .rm-tname { display: flex; align-items: center; gap: 8px; padding-left: 4px; font-weight: 700; font-size: 12.5px; }
+    .rm-ticon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 700; }
+    .rm-ticon.hire { background: var(--primary); }
+    .rm-ticon.ai { background: var(--highlight); }
+    .rm-cell { background: var(--bg-page); border-radius: 6px; padding: 7px; min-height: 76px; display: flex; flex-direction: column; gap: 4px; }
+    .rm-cell.empty { background: transparent; border: 1px dashed rgba(14,16,20,0.08); }
+    .rm-item { padding: 6px 8px; border-radius: 5px; color: white; font-size: 11px; line-height: 1.3; display: flex; flex-direction: column; gap: 1px; }
+    .rm-item.confirmed { background: #2d5a3d; }
+    .rm-item.probable { background: var(--highlight); }
+    .rm-item.possible { background: var(--text-light); }
+    .rm-item .it-title { font-weight: 700; font-size: 11.5px; }
+    .rm-item .it-meta { font-size: 10px; opacity: 0.88; }
+
     @media (max-width: 760px) {
       table.jobs, table.jobs tbody, table.jobs tr, table.jobs td { display: block; width: 100% !important; }
       table.jobs thead { display: none; }
@@ -90,6 +142,9 @@
       table.jobs td { border-top: none; padding: 6px 18px; }
       table.jobs td.job::before { content: "JOB: "; font-size: 10px; color: var(--primary); font-weight: 700; }
       table.jobs td.today::before { content: "TODAY: "; font-size: 10px; color: var(--text-light); font-weight: 700; }
+      .brief-grid { grid-template-columns: 1fr; }
+      .rm-header, .rm-row { grid-template-columns: 80px repeat(2, 1fr); }
+      .rm-header > div:nth-child(n+4), .rm-row > div:nth-child(n+4) { display: none; }
     }
   </style>
 </head>
@@ -212,7 +267,9 @@
       <table class="jobs">
         <thead><tr><th>Should be able to...</th><th>How it's done today</th><th>Supporting tool</th></tr></thead>
         <tbody>
-          <tr><td class="job">Understand each member's hiring + AI agents roadmap and operations</td><td class="today">In their head, scattered notes, Granola</td><td class="tool"><span class="tool-tag">Member roadmap fields</span></td></tr>
+          <tr><td class="job">Walk into the onboarding call deeply prepared on the founder (personal hooks, founder story, business, team, roadmap hypothesis)</td><td class="today">Quick website scan + memory</td><td class="tool"><span class="tool-tag">Tool 16 · Member Intelligence Enricher</span></td></tr>
+          <tr><td class="job">Run the onboarding call relationship-first: 6 blocks, first hiring question at minute 30+</td><td class="today">Freestyle, varies by AP. Most start with hiring intake.</td><td class="tool"><span class="tool-tag">Onboarding Call v2 structure (below)</span></td></tr>
+          <tr><td class="job">Understand each member's hiring + AI agents roadmap and operations</td><td class="today">In their head, scattered notes, Granola</td><td class="tool"><span class="tool-tag">Member roadmap fields + visual</span></td></tr>
           <tr><td class="job">Review shortlist + interview intel before advising</td><td class="today">Manual, asks the TA</td><td class="tool"><span class="tool-tag">HR view + linked data</span></td></tr>
           <tr><td class="job">Advise the member on which candidate to hire and why</td><td class="today">Calls, relationship</td><td class="tool"><span class="tool-none">—</span></td></tr>
           <tr><td class="job">Capture forward-looking demand signals</td><td class="today">Lost unless remembered</td><td class="tool"><span class="tool-tag">Tool 10 → Demand Signals table</span></td></tr>
@@ -222,6 +279,165 @@
         </tbody>
       </table>
       <div class="role-output"><strong>Output:</strong> Placement, retention, account expansion. Plus demand signals that feed back into Sourcing.</div>
+    </div>
+
+    <!-- DEEP DIVE 1 · ONBOARDING CALL V2 -->
+    <div class="deepdive">
+      <div class="deepdive-eyebrow">AP Deep-Dive · 1 of 3</div>
+      <div class="deepdive-title">The v2 onboarding call — relationship first</div>
+      <div class="deepdive-intro">
+        The first call between an AP and a new member is the moment the partnership is built or lost. <strong>v1 was vendor-flavored (hiring intake at minute 3). v2 is a real partnership intake (first hiring question at minute 30+).</strong> The relationship that comes out of this 60–75 min call is worth a 12-month retention curve, not a one-time placement.
+      </div>
+
+      <table class="phil-table">
+        <thead>
+          <tr><th>v1 (vendor-flavored)</th><th class="v2">v2 (real partner)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bond → role discovery → budget → process</td><td class="v2-col">Bond → their story → the business → the team → role → roadmap</td></tr>
+          <tr><td>First hiring question at minute 3</td><td class="v2-col">First hiring question at minute 30–35</td></tr>
+          <tr><td>AP gets the brief, leaves</td><td class="v2-col">AP knows the founder's "why," not just the JD</td></tr>
+          <tr><td>Member feels: efficient</td><td class="v2-col">Member feels: heard</td></tr>
+        </tbody>
+      </table>
+
+      <div class="deepdive-intro"><strong>The 6 blocks:</strong></div>
+
+      <div class="blocks">
+        <div class="block-item">
+          <div class="b-head"><div class="b-name">Block 1 · Real Opening</div><div class="b-time">5–8 min</div></div>
+          <div class="b-desc">Specific personal reference from the brief (the kid, the marathon, the press hit). AP shares something equally personal back. Permission-set: "I want to spend the first half on your business before we get to hiring." Don't move on until the founder has laughed or shared something they didn't have to share.</div>
+        </div>
+        <div class="block-item">
+          <div class="b-head"><div class="b-name">Block 2 · Their Story</div><div class="b-time">12–18 min</div></div>
+          <div class="b-desc">Understand the founder. Not the company yet. The person. Anchor: "Walk me through how this started." Listen 3x more than you talk. Notes on paper, where the founder can see you taking them.</div>
+        </div>
+        <div class="block-item">
+          <div class="b-head"><div class="b-name">Block 3 · The Business Itself</div><div class="b-time">10–15 min</div></div>
+          <div class="b-desc">Understand the company through the founder's lens. Customers, unfair advantage, where it's growing, where the friction is. Bridge question: "Where do you want this company in 3 years?"</div>
+        </div>
+        <div class="block-item">
+          <div class="b-head"><div class="b-name">Block 4 · The Team Today</div><div class="b-time">8–10 min</div></div>
+          <div class="b-desc">No hiring talk yet. The org as it exists. Reports-to, longest-tenured, where it's stretched. The founder organically tells you their hiring problem here.</div>
+        </div>
+        <div class="block-item">
+          <div class="b-head"><div class="b-name">Block 5 · Personality, Roadmap, Growth Lever</div><div class="b-time">8–10 min</div></div>
+          <div class="b-desc">Where the AP earns the consultant title. Key question: "You're hiring this seat now. Tell me what the next seat is. And the one after." If the founder doesn't have a roadmap, the AP offers a hypothesis. That's the renewal anchor.</div>
+        </div>
+        <div class="block-item">
+          <div class="b-head"><div class="b-name">Block 6 · Co-Design + Close</div><div class="b-time">5–7 min</div></div>
+          <div class="b-desc">Promise the 24-hour commitment doc. Confirm first drop. Schedule 30-day strategic check-in on the call. Final close — warm and personal, not corporate.</div>
+        </div>
+        <div class="block-item omitted">
+          <div class="b-head"><div class="b-name">Block · Role mechanics</div><div class="b-time">Handled by TA</div></div>
+          <div class="b-desc">Day-to-day, tech stack, reports-to, "great at 90 days" — handled by the TA in a separate role-intake call. Not in the onboarding.</div>
+        </div>
+        <div class="block-item omitted">
+          <div class="b-head"><div class="b-name">Block · Budget + process</div><div class="b-time">Handled by sales/DP</div></div>
+          <div class="b-desc">Rate confirmation, drop cadence, payment terms — handled before close by sales, or in a short follow-up. Keeps the onboarding call pure: relationship + strategy.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEEP DIVE 2 · MEMBER BRIEF (TOOL 16) -->
+    <div class="deepdive">
+      <div class="deepdive-eyebrow">AP Deep-Dive · 2 of 3</div>
+      <div class="deepdive-title">The Member Brief — what Tool 16 produces 24h before the call</div>
+      <div class="deepdive-intro">
+        Tool 16 (Member Intelligence Enricher) runs 24 hours before the onboarding call and lands a deep brief in the AP's inbox. <strong>The brief is built for the v2 call — relationship-first, not hiring-first.</strong> It loads up on personal hooks, founder story, and business context so the AP walks in feeling like Sagan has already invested in the relationship.
+      </div>
+
+      <div class="brief-grid">
+        <div class="brief-card">
+          <div class="brief-card-label">For Block 1 · Real Opening</div>
+          <div class="brief-card-text">Personal hooks pulled from sales transcripts + LinkedIn + recent press. Pick one. Be specific. <em>"Sarah ran the NYC marathon in November" / "Tom is a Cowboys fan, saw it on his Zoom background."</em></div>
+        </div>
+        <div class="brief-card">
+          <div class="brief-card-label">For Block 2 · Founder Story</div>
+          <div class="brief-card-text">Where they grew up, prior companies, why they started this one. Public clues from LinkedIn posts about how they think. The "why" before the AP asks.</div>
+        </div>
+        <div class="brief-card">
+          <div class="brief-card-label">For Block 3 · The Business</div>
+          <div class="brief-card-text">Stage, funding, growth rate, customers, the unfair advantage in their own words from sales transcripts. Industry context (what's happening in their market).</div>
+        </div>
+        <div class="brief-card">
+          <div class="brief-card-label">For Block 4 · The Team</div>
+          <div class="brief-card-text">LinkedIn org map. Recent hires + leadership churn. Educated guess on the pain point the founder will surface about who's drowning vs. who's solid.</div>
+        </div>
+        <div class="brief-card">
+          <div class="brief-card-label">For Block 5 · Roadmap Hypothesis</div>
+          <div class="brief-card-text">Based on similar Sagan members at the same stage: what does hire #1, #2, #3 look like? What AI agent builds make sense? Ready to surface if the founder doesn't have one.</div>
+        </div>
+        <div class="brief-card">
+          <div class="brief-card-label">What the AP brings personally</div>
+          <div class="brief-card-text">3-item checklist for the AP: one personal opener, one thing to share back about themselves, one roadmap hypothesis ready for Block 5. Walks in with conviction.</div>
+        </div>
+      </div>
+
+      <div class="deepdive-intro" style="margin-top: 16px; padding: 14px 18px; background: var(--bg-card); border-radius: 8px; border-left: 4px solid var(--highlight); margin-bottom: 0;">
+        <strong>What the brief tells the AP NOT to do:</strong> don't lead with the hire, don't promise transactional numbers early, don't reference sales transcripts directly ("you said X") — use the signal, don't show your homework.
+      </div>
+    </div>
+
+    <!-- DEEP DIVE 3 · ROADMAP VISUAL -->
+    <div class="deepdive">
+      <div class="deepdive-eyebrow">AP Deep-Dive · 3 of 3</div>
+      <div class="deepdive-title">The roadmap visual — two tracks, four quarters, one member view</div>
+      <div class="deepdive-intro">
+        After the onboarding call (and updated at every touchpoint), the member's hiring + AI agents roadmap lives in the Member Portal as a <strong>two-track quarterly grid</strong>. Cards colored by confidence. Scannable in 5 seconds. This is what the AP shows the member at the 30-day strategic check-in.
+      </div>
+
+      <div class="rm-legend">
+        <div><span class="ld" style="background: var(--primary);"></span> Hire</div>
+        <div><span class="ld" style="background: var(--highlight);"></span> AI Agent Build</div>
+        <div style="margin-left: 14px;"><span class="ld" style="background: #2d5a3d;"></span> Confirmed</div>
+        <div><span class="ld" style="background: var(--highlight);"></span> Probable</div>
+        <div><span class="ld" style="background: var(--text-light);"></span> Possible</div>
+      </div>
+
+      <div class="rm-grid">
+        <div class="rm-header">
+          <div class="rm-tlabel">Track</div>
+          <div class="rm-qlabel">Q3 2026</div>
+          <div class="rm-qlabel">Q4 2026</div>
+          <div class="rm-qlabel">Q1 2027</div>
+          <div class="rm-qlabel">Q2 2027</div>
+        </div>
+
+        <div class="rm-row">
+          <div class="rm-tname"><div class="rm-ticon hire">H</div><span>Hires</span></div>
+          <div class="rm-cell">
+            <div class="rm-item confirmed"><div class="it-title">SDR (LATAM)</div><div class="it-meta">$1.5–2.2k · HR00042</div></div>
+            <div class="rm-item confirmed"><div class="it-title">SDR (LATAM)</div><div class="it-meta">$1.5–2.2k · HR00043</div></div>
+          </div>
+          <div class="rm-cell">
+            <div class="rm-item probable"><div class="it-title">CSR / Onboarding</div><div class="it-meta">$1.2–1.6k · Spanish</div></div>
+            <div class="rm-item probable"><div class="it-title">Sales Ops</div><div class="it-meta">$2.5–3.2k · Senior</div></div>
+          </div>
+          <div class="rm-cell">
+            <div class="rm-item possible"><div class="it-title">RevOps Lead</div><div class="it-meta">$3.5–4.5k · If Series B</div></div>
+          </div>
+          <div class="rm-cell empty"></div>
+        </div>
+
+        <div class="rm-row">
+          <div class="rm-tname"><div class="rm-ticon ai">AI</div><span>AI Builds</span></div>
+          <div class="rm-cell empty"></div>
+          <div class="rm-cell">
+            <div class="rm-item probable"><div class="it-title">Prospect Research Agent</div><div class="it-meta">Outbound enrichment</div></div>
+          </div>
+          <div class="rm-cell">
+            <div class="rm-item probable"><div class="it-title">Email Personalization</div><div class="it-meta">SDR augmentation</div></div>
+          </div>
+          <div class="rm-cell">
+            <div class="rm-item possible"><div class="it-title">Lead Triage Agent</div><div class="it-meta">CSR augmentation</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deepdive-intro" style="margin-top: 16px; margin-bottom: 0;">
+        <strong>Why this layout:</strong> shows both roadmaps at once (no toggle), scannable in 5 seconds, quarter granularity matches how members actually commit to hiring, easy to render + update inside the Member Portal. Cards drive directly from the Member record's <code>hiring_roadmap</code> + <code>ai_agents_roadmap</code> fields, with confidence pulled from the linked Demand Signals.
+      </div>
     </div>
 
     <!-- ROLE 6 -->
@@ -249,8 +465,10 @@
       <h3>Related documents</h3>
       <ul>
         <li>📄 <a href="system-prd.md">Full written PRD</a> — the complete jobs-to-be-done breakdown with open questions</li>
-        <li>🗄️ <a href="../database/schema.md">Database schema</a> — 4 tables, Database v1</li>
-        <li>🤖 <a href="../ai-tools/README.md">AI tools specs</a> — 11 tools, priority-ordered</li>
+        <li>🗄️ <a href="../database/schema.md">Database schema</a> — 7 tables, v1</li>
+        <li>🤖 <a href="../ai-tools/README.md">AI tools specs</a> — 16 tools, priority-ordered</li>
+        <li>📞 <a href="../ops/ap-onboarding-call-structure.md">AP onboarding call structure v2</a> — full 6-block playbook</li>
+        <li>🗺️ <a href="../roadmaps/">Roadmap visual (full mockup)</a> — the two-track grid with Acme example</li>
         <li>📊 <a href="../../index.html">Full proposal</a> — the why and the model</li>
       </ul>
     </div>

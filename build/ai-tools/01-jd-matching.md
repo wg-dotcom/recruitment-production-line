@@ -18,7 +18,7 @@ Without this, Stage 3 has to manually scan the Candidates table for every JD. Th
 
 ## Input
 
-From Airtable `Hiring Requests` table, one record:
+From Database `Hiring Requests` table, one record:
 
 ```
 {
@@ -70,7 +70,7 @@ If fewer than 3 strong matches exist:
 
 ## MVP scope (build this)
 
-- Reads HR + filtered Candidates table via Airtable MCP
+- Reads HR + filtered Candidates table via Database MCP
 - Sends one structured prompt to Claude with both
 - Returns ranked list, writes back to HR record
 - Surfaces low-match alerts to TA
@@ -105,7 +105,7 @@ Output schema: enforced JSON.
 
 - **Reads from:** `Candidates` (filtered Ready), `Hiring Requests` (one record)
 - **Writes to:** `Hiring Requests.candidates_presented`, `Hiring Requests.match_output_raw`
-- **Triggered from:** Airtable Interface button or internal Sagan CLI
+- **Triggered from:** Database UI button or internal Sagan CLI
 - **Logs to:** `tool_run_log` (TBD)
 
 ---

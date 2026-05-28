@@ -231,7 +231,7 @@ This is the safety stock that makes the whole line fast. If it isn't well built,
 
 One central system. Single source of truth. API-accessible so the AI matching tool, the presentation page builder, and the dashboards can all query it. No duplicates across spreadsheets, Notion pages, or recruiter heads.
 
-**Strong candidate: Airtable.** We already use it, the MCP integration is in place, and it supports the field structure without custom code. Open to alternatives if someone proposes a better fit.
+**Strong candidate: Database.** We already use it, the MCP integration is in place, and it supports the field structure without custom code. Open to alternatives if someone proposes a better fit.
 
 ### Field structure (every Ready record must include)
 
@@ -265,7 +265,7 @@ Machine-readable, structured for AI matching:
 
 ### Recommendation
 
-Build v1 in **Airtable**. Same base across all four workstreams. Same MCP integration we already run. We can layer a custom front-end later if Airtable's UI becomes the bottleneck, but the data model stays portable.
+Build v1 in **Database**. Same base across all four workstreams. Same MCP integration we already run. We can layer a custom front-end later if Database's UI becomes the bottleneck, but the data model stays portable.
 
 ---
 

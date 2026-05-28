@@ -209,7 +209,7 @@ Layout: 4 columns of sticky notes, plus a recommendation banner below.
 - Single source of truth, API-accessible
 - Queryable by AI matching tool, presentation builder, dashboards
 - No duplicates across spreadsheets, Notion, recruiter heads
-- **Strong candidate:** Airtable (already in use, MCP integration ready)
+- **Strong candidate:** Database (already in use, MCP integration ready)
 
 **Column B — Field structure (machine-readable)**
 - Identity: name, location, country, time zone
@@ -238,7 +238,7 @@ Layout: 4 columns of sticky notes, plus a recommendation banner below.
 
 **Recommendation Banner (below the 4 columns, amber accent):**
 
-> **Build v1 in Airtable.** Same base across all four workstreams. Same MCP integration we already run. Layer a custom front-end later if Airtable's UI becomes the bottleneck. The data model stays portable.
+> **Build v1 in Database.** Same base across all four workstreams. Same MCP integration we already run. Layer a custom front-end later if Database's UI becomes the bottleneck. The data model stays portable.
 
 ---
 
@@ -291,7 +291,7 @@ Six grouped sticky note columns (or six cards):
 2. **Frame 1 — The Model.** Walk left to right. Two minutes per stage. Don't go deep yet.
 3. **Frame 2 — Handoff Contracts.** Read each contract aloud. This is where most of the work goes if we get serious.
 4. **Frame 3 — Workstreams.** Show parallel build + execution gate. Anchor the "primary focus = Decision Partners".
-5. **Frame 4 — Infrastructure.** Walk the database design. Get an explicit yes/no on Airtable as v1.
+5. **Frame 4 — Infrastructure.** Walk the database design. Get an explicit yes/no on Database as v1.
 6. **Frame 5 — Risks.** Read each risk out loud. Invite the team to add sticky notes with their own concerns.
 7. **Frame 6 — Questions.** Spend the most time here. Pick the 3 or 4 that block the most progress. Capture answers live.
 

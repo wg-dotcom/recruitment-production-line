@@ -21,7 +21,7 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 
 - **Roles** = the kinds of users who log in.
 - **Jobs to be done** = the tasks each role needs to complete. Phrased as "X should be able to ___."
-- **Today** = the current workflow/tool for that job (Airtable, dashboards, manual steps).
+- **Today** = the current workflow/tool for that job (Database, dashboards, manual steps).
 - **Supporting AI tool** = which planned tool, if any, accelerates that job. Full specs in [`../ai-tools/`](../ai-tools/README.md).
 
 ---
@@ -47,9 +47,9 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 |---|---|---|---|
 | 1.1 | Find candidates for the most-requested roles (EA, CSR, SDR, Bookkeeper, Accountant) at target volume | LinkedIn Recruiter + outbound tools, manual searching | — (human-led in v1) |
 | 1.2 | Run outbound for specialty / hard-to-fill roles (the Assault Team) | Manual outbound, custom searches | — |
-| 1.3 | Add a newly sourced candidate into the system | Manual entry into Airtable / current spreadsheet | — |
+| 1.3 | Add a newly sourced candidate into the system | Manual entry into Database / current spreadsheet | — |
 | 1.4 | Tag each candidate by role family + priority so the next stage knows what they're looking at | Manual, inconsistent tagging today | — |
-| 1.5 | See which role families need more candidates (where's the pipeline thin?) | Gut feel / informal | Airtable view (Candidates grouped by role + Ready status) |
+| 1.5 | See which role families need more candidates (where's the pipeline thin?) | Gut feel / informal | Database view (Candidates grouped by role + Ready status) |
 
 **Output of this role:** Raw candidate pool. Records created in the system at `lifecycle_status = Sourced`, tagged by role family and priority.
 
@@ -78,9 +78,9 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 
 | # | The TA should be able to... | How it's done today | Supporting AI tool |
 |---|---|---|---|
-| 3.1 | Receive a Hiring Request (JD) from a member | Airtable / Zach's dashboard / Slack, varies | System: HR intake |
+| 3.1 | Receive a Hiring Request (JD) from a member | Database / Zach's dashboard / Slack, varies | System: HR intake |
 | 3.1b | Merge the JD with the kickoff transcript into a structured internal briefing | Manual reading + memory | **Tool 13 · Briefing Generator** |
-| 3.2 | Find the best-matching candidates in the Ready database (top 20) | Manual scanning of Airtable, hours per JD | **Tool 01 · JD ↔ Database Matching** |
+| 3.2 | Find the best-matching candidates in the Ready database (top 20) | Manual scanning of Database, hours per JD | **Tool 01 · JD ↔ Database Matching** |
 | 3.3 | Build a polished presentation page for the member (member-branded, 2nd-batch detection, with feedback widget per candidate) | Hand-built HTML from a template, copy-paste from resumes | **Tool 02 · Presentation Page Builder** |
 | 3.4 | Prepare candidates ahead of member interviews | Manual coaching, inconsistent | **Tool 09 · Interview Prep Generator** |
 | 3.5 | Support / run interviews with the member, prevent personal info sharing | Manual, calls | — |
@@ -136,7 +136,7 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 | 6.4 | See where the line is jammed (which stage has growing WIP) | Manual, multiple dashboards | **Tool 11 · Bottleneck Detector** |
 | 6.5 | Track throughput + stage-level metrics (time-to-first-presentation, placement rate, etc.) | Zach's dashboard / Replit dashboard / manual reporting | **Tool 15** |
 | 6.6 | Onboard a new team member into a single stage quickly | Ad hoc | — (process, not tool) |
-| 6.7 | Audit the health of the database (freshness, decay, coverage) | Not done systematically | Airtable views + decay automation |
+| 6.7 | Audit the health of the database (freshness, decay, coverage) | Not done systematically | Database views + decay automation |
 
 ---
 
@@ -155,7 +155,7 @@ Full detail in the [database schema](../database/schema.md). In brief, 4 tables:
 3. **Members** — the accounts
 4. **Interview Reports** — structured interview output that auto-enriches Candidates
 
-Recommendation: **Airtable as v1.** Already in use, MCP integration ready, no custom backend until volume forces it.
+Recommendation: **Database as v1.** Already in use, MCP integration ready, no custom backend until volume forces it.
 
 ---
 
@@ -174,7 +174,7 @@ The portal becomes the member's home for the relationship, not a static URL per 
 
 ## What we're explicitly NOT building in v1
 
-- A net-new front-end framework (the portal is a revamp; Airtable Interfaces cover internal views)
+- A net-new front-end framework (the portal is a revamp; Database UI cover internal views)
 - Automated sourcing (Stage 1 stays human-led in v1)
 - Member self-service hiring requests (members request through the AP, not via a form)
 
@@ -182,11 +182,11 @@ The portal becomes the member's home for the relationship, not a static URL per 
 
 ## Open questions for the infra team
 
-1. **Where do the AI tools run?** Standalone scripts, an internal Sagan app, Airtable extensions, or a mix? (We have a per-tool view but want your take.)
-2. **Airtable Interfaces vs. a light custom UI** — at what point does Airtable's native interface stop being enough?
-3. **Auth / access** — Airtable's permission model vs. something we layer on top.
+1. **Where do the AI tools run?** Standalone scripts, an internal Sagan app, Database extensions, or a mix? (We have a per-tool view but want your take.)
+2. **Database UI vs. a light custom UI** — at what point does Database's native interface stop being enough?
+3. **Auth / access** — Database's permission model vs. something we layer on top.
 4. **Observability** — do we want a `tool_run_log` for debugging AI tool runs? (Not in the v1 schema yet.)
-5. **Migration** — how much of the current Airtable / Zach's dashboard / Replit data do we carry over vs. start clean?
+5. **Migration** — how much of the current Database / Zach's dashboard / Replit data do we carry over vs. start clean?
 
 ---
 

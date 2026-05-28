@@ -27,7 +27,7 @@ A prompt box at the top of the dashboard. Jesus types things like:
 - "Show me Members with no touchpoint in 45 days"
 - "What's the conversion rate from Sourced → Ready for bookkeepers?"
 
-The tool translates the question into an Airtable query (or SQL-like query against an Airtable mirror), runs it, returns the answer + a generated chart if visual.
+The tool translates the question into an Database query (or SQL-like query against an Database mirror), runs it, returns the answer + a generated chart if visual.
 
 ### Part C · Kanban CRM-style view
 HRs as cards, columns by status (`New` → `Matching` → `Presenting` → `Interviewing` → `Placed` → `Closed`). Drag-and-drop, filter by member, by TA, by Decision Partner. Treats the HR pipeline like a sales pipeline. Enables **forecasting**:
@@ -44,11 +44,11 @@ Jesus runs the system, not the requests. This dashboard is how he sees the whole
 
 ## Input
 
-Reads from the entire Airtable base (all 7 tables) + tool run logs.
+Reads from the entire Database base (all 7 tables) + tool run logs.
 
 ## Output
 
-A web app (or Airtable Interface + extensions, if that's enough in v1). Three views: Metrics, NL Query, Kanban.
+A web app (or Database UI + extensions, if that's enough in v1). Three views: Metrics, NL Query, Kanban.
 
 ---
 
@@ -61,7 +61,7 @@ A web app (or Airtable Interface + extensions, if that's enough in v1). Three vi
 
 ## Model
 
-- NL Query: Claude Opus 4.7 for reasoning about ambiguous questions + writing Airtable formulas/queries
+- NL Query: Claude Opus 4.7 for reasoning about ambiguous questions + writing Database formulas/queries
 - Forecasting: deterministic statistical model (no LLM needed); LLM for natural-language commentary on the forecast
 
 ## What it deliberately doesn't do

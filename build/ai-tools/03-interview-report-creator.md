@@ -130,7 +130,7 @@ Output: merged `ai_summary_strengths` (long text), `ai_summary_red_flags` (long 
 
 - **Reads from:** Raw form input (or Granola URL in v2)
 - **Writes to:** New `Interview Reports` record + linked `Candidates` enrichment fields
-- **Triggered from:** Airtable Interface form on TA's view
+- **Triggered from:** Database UI form on TA's view
 - **Logs to:** `tool_run_log` (TBD)
 
 ---

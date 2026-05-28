@@ -22,7 +22,7 @@ We already have ~40 candidate presentation pages live across [saganpassport.com]
 
 ## Input
 
-From Airtable:
+From Database:
 
 ```
 {
@@ -66,11 +66,11 @@ A complete HTML file written to a deployable location (GitHub Pages repo or Saga
 
 ## MVP scope (build this)
 
-- Reads HR + linked candidates + member record (for branding) + NotebookLM context (for tone/voice) from Airtable
+- Reads HR + linked candidates + member record (for branding) + NotebookLM context (for tone/voice) from Database
 - Generates HTML from a locked template (the existing Sagan Passport format)
 - Per candidate: avatar (initial-based), location, salary range, tech stack tags, narrative paragraph (AI-generated from `ai_summary_strengths` + resume snippets + JD context), resume + video links
 - **Member-branded:** pulls logo + accent color from member record, applies to header + accent areas
-- **Feedback widget per candidate:** simple text area + thumbs up/down, posts back into Airtable on the linked HR record
+- **Feedback widget per candidate:** simple text area + thumbs up/down, posts back into Database on the linked HR record
 - **Batch tab detection:** if the HR already has a presentation_url, the tool appends a new tab to the existing page instead of overwriting
 - Writes to the Sagan member portal (see Member Portal note below), returns URL, writes it back to the HR
 
@@ -111,7 +111,7 @@ The HTML template is rendered by a deterministic templating layer (not the LLM).
 
 - **Reads from:** `Hiring Requests` + linked `Candidates`
 - **Writes to:** `Hiring Requests.presentation_url`, GitHub Pages repo
-- **Triggered from:** Airtable Interface button
+- **Triggered from:** Database UI button
 - **Depends on:** Tool 01 having run successfully (candidates_presented must be populated)
 
 ---

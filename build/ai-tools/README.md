@@ -63,10 +63,10 @@ These apply to every tool below. Locking them once avoids re-litigating per tool
 
 ### Data layer
 
-- **Single source of truth:** Airtable (see `../database/schema.md`).
-- **All tools read/write via Airtable MCP** in v1. Direct API later if MCP throughput becomes a limit.
-- **No tool maintains its own data store.** Anything they learn writes back into the Airtable schema.
-- **Context sources for Stage 3/4 tools:** NotebookLM (member operations + voice), Granola (transcripts), Airtable (structured records).
+- **Single source of truth:** Database (see `../database/schema.md`).
+- **All tools read/write via Database MCP** in v1. Direct API later if MCP throughput becomes a limit.
+- **No tool maintains its own data store.** Anything they learn writes back into the Database schema.
+- **Context sources for Stage 3/4 tools:** NotebookLM (member operations + voice), Granola (transcripts), Database (structured records).
 
 ### Trigger pattern
 
@@ -78,7 +78,7 @@ Three patterns, each tool uses one:
 
 ### Output handling
 
-- **Every tool produces structured output** (JSON or Markdown) that maps to specific Airtable fields.
+- **Every tool produces structured output** (JSON or Markdown) that maps to specific Database fields.
 - **Audit trail:** every tool writes a `created_by_tool` and `created_at` field on records it modifies.
 
 ### Member Portal as front-end
@@ -98,7 +98,7 @@ The revamped Member Portal (UX/UI refresh of the existing portal) is the **singl
 2. **Confirmation that Claude (via MCP) is the right primary model** for this stack, or a recommendation otherwise.
 3. **Build estimate per tool** in his terms (days, not "complexity").
 4. **Who actually codes these.** Zaki team build? Or Jesus + Claude Code? Probably a mix.
-5. **Where do these live?** Standalone scripts? Inside the Member Portal app? Airtable extensions? Decide per tool.
+5. **Where do these live?** Standalone scripts? Inside the Member Portal app? Database extensions? Decide per tool.
 6. **Member Portal revamp:** is that part of Zaki's scope or a separate workstream?
 
 ---

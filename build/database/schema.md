@@ -1,6 +1,6 @@
-# Recruitment Production Line — Database Schema (v1, Airtable)
+# Recruitment Production Line — Database Schema (v1, Database)
 
-This is the v1 schema for the Sagan recruitment production line. Built in Airtable for fast iteration, MCP integration, and zero custom backend until volume forces it.
+This is the v1 schema for the Sagan recruitment production line. Built in Database for fast iteration, MCP integration, and zero custom backend until volume forces it.
 
 **Status:** Draft for Zaki review. Field names and types are firm. Field-level defaults and automations marked `[TBD]` are open for discussion.
 
@@ -71,7 +71,7 @@ The single source of truth for every person we could present. This is the safety
 
 **Lifecycle automations on this table:**
 
-- On status → `Ready`: validate all required-for-Ready fields are filled. Block save if not. `[TBD: Airtable interface form vs. script]`
+- On status → `Ready`: validate all required-for-Ready fields are filled. Block save if not. `[TBD: Database interface form vs. script]`
 - **Decay cascade (daily cron):**
   - Day 14 no refresh → `decay_color = Yellow` (warning, no action)
   - Day 30 no refresh → `decay_color = Red`, **triggers automation** (task assigned to Candidate Ops, email candidate)
@@ -250,7 +250,7 @@ Demand Signals (1)──< Sourcing Strategy >──< Team Members
 
 ---
 
-## Access control (Airtable interface roles)
+## Access control (Database interface roles)
 
 | Role | Read | Write | Notes |
 |---|---|---|---|
@@ -265,7 +265,7 @@ Demand Signals (1)──< Sourcing Strategy >──< Team Members
 ## What we still need to decide
 
 - [ ] Should `tech_stack` and `languages` use controlled vocabularies (multi-select) or free-text + AI normalization?
-- [ ] Field-level access (e.g. hide `salary_*` from non-Candidate Ops) — Airtable handles this at the interface level
+- [ ] Field-level access (e.g. hide `salary_*` from non-Candidate Ops) — Database handles this at the interface level
 - [ ] Do we want a separate `Activities` log table for stage-level metric tracking, or rollups + formulas are enough?
 - [ ] How do we handle replacement candidates (Placed → re-Ready)? Likely a `replacement_for` link field on a new HR record.
 - [ ] Currency. All USD for now. If we onboard non-US members later, add `currency` field with conversion.
@@ -277,7 +277,7 @@ Demand Signals (1)──< Sourcing Strategy >──< Team Members
 1. **Day 1:** Build all 7 tables with fields. Skip automations.
 2. **Day 1:** Load 20 dummy Candidates spanning all lifecycle statuses, 5 dummy Members, 10 dummy HRs.
 3. **Day 2:** Wire up rollups and formulas (`time_to_first_presentation_hours`, `current_ready_count`, etc.).
-4. **Day 2:** Build Airtable Interfaces for each role's view (Sourcing, Candidate Ops, TA, Decision Partner).
+4. **Day 2:** Build Database UI for each role's view (Sourcing, Candidate Ops, TA, Decision Partner).
 5. **Day 3:** Wire up automations: status-change validations, decay flags, interview report → auto-enrich.
 6. **Day 3:** Connect MCP to the base. Confirm read/write from a Claude session.
 7. **Day 4+:** AI tools start hitting this schema (see `../ai-tools/`).

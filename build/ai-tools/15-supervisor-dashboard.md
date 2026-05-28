@@ -54,10 +54,10 @@ A web app (or Database UI + extensions, if that's enough in v1). Three views: Me
 
 ## MVP scope
 
-- Phase 4 tool — build once we have 1–2 months of production data
-- Phase 4a (Weeks 8–10): Metrics dashboard (similar to WG/Core dashboards)
-- Phase 4b (Weeks 10–12): NL Query field on top of the dashboard
-- Phase 4c (Weeks 12+): Kanban view + forecasting
+- Phase 4 tool — build once the line is producing real data (after launch)
+- Phase 4a: Metrics dashboard (similar to WG/Core dashboards)
+- Phase 4b: NL Query field on top of the dashboard
+- Phase 4c: Kanban view + forecasting
 
 ## Model
 

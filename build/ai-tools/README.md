@@ -12,9 +12,15 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 
 ---
 
+## Execution timeline
+
+**Launch target: 2–3 weeks.** Phase 1 tools are the must-haves to run the production line end-to-end. Everything after Phase 1 is an enhancement layered on top of a working line. We don't need all 16 tools to go live — we need 4.
+
+---
+
 ## Priority list (16 tools)
 
-### Phase 1 · Make the line work end-to-end (Weeks 1–3)
+### Phase 1 · Launch the line — 2 to 3 weeks
 
 | # | Tool | Stage | Spec | Why first |
 |---|---|---|---|---|
@@ -23,7 +29,7 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 | 03 | **Interview Report Creator + Auto-Enrichment + Candidate Email** | Stage 3 → DB | [`03-interview-report-creator.md`](./03-interview-report-creator.md) | Closes the learning loop. Every interview makes the DB smarter. Sends feedback email to candidate. |
 | 13 | **Briefing Generator (NEW)** | Stage 3 (intake) | [`13-briefing-generator.md`](./13-briefing-generator.md) | Merges JD + kickoff transcript into a structured internal briefing that feeds the Matching tool. Precursor to Tool 01. |
 
-### Phase 2 · Keep the safety stock alive (Weeks 3–5)
+### Phase 2 · Keep the safety stock alive — after launch
 
 | # | Tool | Stage | Spec | Why next |
 |---|---|---|---|---|
@@ -32,7 +38,7 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 | 06 | **Resume Polish Workflow** | Stage 2 | [`06-resume-polish.md`](./06-resume-polish.md) | Massive throughput multiplier for Candidate Ops. |
 | 12 | **Video Quality Verifier (NEW)** | Stage 2 | [`12-video-verifier.md`](./12-video-verifier.md) | Checks intro video quality, auto-emails candidates with recording suggestions if below standard. |
 
-### Phase 3 · Sharpen the loop (Weeks 5–8)
+### Phase 3 · Sharpen the loop — ongoing
 
 | # | Tool | Stage | Spec | Why later |
 |---|---|---|---|---|
@@ -43,7 +49,7 @@ The line is only as fast as its bottleneck. The tools below are sequenced so tha
 | 14 | **AP Meeting Briefing + Roadmap Updater (NEW)** | Stage 4 | [`14-ap-briefing.md`](./14-ap-briefing.md) | Generates a briefing doc after every AP↔member meeting. Updates hiring roadmap + AI agents roadmap. Posts to Member Portal. |
 | 16 | **Member Intelligence Enricher (NEW)** | Stage 4 (pre-onboarding) | [`16-member-intelligence-enricher.md`](./16-member-intelligence-enricher.md) | Pulls company info, sales transcripts, and LinkedIn signals to build a deep Member Brief the AP uses for the onboarding call. First impression matters. |
 
-### Phase 4 · System intelligence (Weeks 8+)
+### Phase 4 · System intelligence — once data is flowing
 
 | # | Tool | Stage | Spec | Why last |
 |---|---|---|---|---|

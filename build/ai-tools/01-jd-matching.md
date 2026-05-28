@@ -8,7 +8,7 @@
 
 ## What it does
 
-Given a Hiring Request, returns the top **up to 10** candidates from the Ready safety stock that match the JD, ranked by fit. Each result includes a match rationale explaining why.
+Given a Hiring Request **enriched with the kickoff transcript** (via Tool 13 · Briefing Generator), returns the top 20 candidates from the Ready safety stock that match the JD, ranked by fit. Each result includes a match rationale explaining why.
 
 ## Why it matters
 

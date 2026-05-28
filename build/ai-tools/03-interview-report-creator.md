@@ -12,6 +12,7 @@ Takes raw interview notes (form input or Granola transcript) and produces:
 
 1. A structured Interview Report record (Strengths, Red Flags, Communication Style, Role Fit Signal, AI Summary).
 2. **Auto-enriches the linked Candidate's profile** in the Ready database — strengths, red flags, communication style accumulate over time.
+3. **Sends a feedback email to the candidate** — "you did great in X, focus on Y next time." Tone: encouraging, specific, actionable.
 
 ## Why it matters
 
@@ -93,6 +94,7 @@ After write-back, the Interview Report's `auto_enriched` flag flips to `true`.
 - Generates the structured report fields from raw notes via single LLM call
 - Writes the report record
 - Auto-enriches the linked Candidate (append + dedupe, no semantic deduping in v1 — just append with timestamps)
+- **Generates and sends candidate feedback email** with strengths + improvement areas (TA reviews before send in v1; auto-send in v2)
 
 ## v2 (skip for MVP)
 

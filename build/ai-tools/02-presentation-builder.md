@@ -8,7 +8,7 @@
 
 ## What it does
 
-Given a Hiring Request with linked matched candidates, generates a polished HTML presentation page (Sagan Passport style) ready to share with the member. One page per HR, up to 10 candidates per page.
+Given a Hiring Request with linked matched candidates, generates a polished HTML presentation page (Sagan Passport style) ready to share with the member. One page per HR. **The page mirrors the member's branding/colors** (logo, palette pulled from member record + NotebookLM context). **Includes a feedback widget per candidate** so the member can leave notes inline. **Detects 2nd, 3rd, Nth batches and renders them as additional tabs on the same page** rather than creating new URLs.
 
 ## Why it matters
 
@@ -66,19 +66,24 @@ A complete HTML file written to a deployable location (GitHub Pages repo or Saga
 
 ## MVP scope (build this)
 
-- Reads HR + linked candidates from Airtable
+- Reads HR + linked candidates + member record (for branding) + NotebookLM context (for tone/voice) from Airtable
 - Generates HTML from a locked template (the existing Sagan Passport format)
-- Per candidate: avatar (initial-based), location, salary range, tech stack tags, narrative paragraph (AI-generated from `ai_summary_strengths` + resume snippets), resume + video links
-- Writes the file to the `wg-dotcom` GitHub org as a new repo or subfolder, auto-enables Pages
-- Returns the URL, writes it back to the HR
+- Per candidate: avatar (initial-based), location, salary range, tech stack tags, narrative paragraph (AI-generated from `ai_summary_strengths` + resume snippets + JD context), resume + video links
+- **Member-branded:** pulls logo + accent color from member record, applies to header + accent areas
+- **Feedback widget per candidate:** simple text area + thumbs up/down, posts back into Airtable on the linked HR record
+- **Batch tab detection:** if the HR already has a presentation_url, the tool appends a new tab to the existing page instead of overwriting
+- Writes to the Sagan member portal (see Member Portal note below), returns URL, writes it back to the HR
 
 ## v2 (skip for MVP)
 
-- Member-branded variant (member's logo, colors)
 - Custom layout per role family
 - Embedded video player vs. external link
 - Member analytics (who viewed which candidate, how long)
 - Public/private toggle with password protection
+
+## Member Portal integration
+
+Output is published into the **revamped Sagan Member Portal**, not as a standalone URL. The portal is the member's home for all their HRs, briefings, and roadmaps. Each presentation page is a sub-view inside the portal, scoped to the member's account.
 
 ---
 

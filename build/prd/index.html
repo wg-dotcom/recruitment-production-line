@@ -170,11 +170,12 @@
         <thead><tr><th>Should be able to...</th><th>How it's done today</th><th>Supporting tool</th></tr></thead>
         <tbody>
           <tr><td class="job">Receive a Hiring Request (JD) from a member</td><td class="today">Airtable / Zach's dashboard / Slack, varies</td><td class="tool"><span class="tool-tag">System intake</span></td></tr>
-          <tr><td class="job">Find best-matching candidates in the Ready database</td><td class="today">Manual scanning of Airtable, hours per JD</td><td class="tool"><span class="tool-tag">Tool 01 · Matching</span></td></tr>
-          <tr><td class="job">Build a polished presentation page for the member</td><td class="today">Hand-built HTML, copy-paste from resumes</td><td class="tool"><span class="tool-tag">Tool 02 · Presentation Builder</span></td></tr>
+          <tr><td class="job">Merge JD + kickoff transcript into a structured briefing</td><td class="today">Manual reading + memory</td><td class="tool"><span class="tool-tag">Tool 13 · Briefing Generator</span></td></tr>
+          <tr><td class="job">Find top 20 candidates in the Ready database</td><td class="today">Manual scanning, hours per JD</td><td class="tool"><span class="tool-tag">Tool 01 · Matching</span></td></tr>
+          <tr><td class="job">Build a polished, member-branded presentation page (2nd-batch tabs, per-candidate feedback widget)</td><td class="today">Hand-built HTML, copy-paste from resumes</td><td class="tool"><span class="tool-tag">Tool 02 · Presentation Builder</span></td></tr>
           <tr><td class="job">Prepare candidates ahead of member interviews</td><td class="today">Manual coaching, inconsistent</td><td class="tool"><span class="tool-tag">Tool 09 · Interview Prep</span></td></tr>
-          <tr><td class="job">Support / run interviews with the member</td><td class="today">Manual, calls</td><td class="tool"><span class="tool-none">—</span></td></tr>
-          <tr><td class="job">Capture a structured interview report after each one</td><td class="today">Free-text notes, often lost</td><td class="tool"><span class="tool-tag">Tool 03 · Report Creator</span></td></tr>
+          <tr><td class="job">Support interviews + prevent personal info sharing</td><td class="today">Manual, calls</td><td class="tool"><span class="tool-none">—</span></td></tr>
+          <tr><td class="job">Capture structured interview report + auto-email candidate feedback</td><td class="today">Free-text notes, no candidate feedback today</td><td class="tool"><span class="tool-tag">Tool 03 · Report + Email</span></td></tr>
           <tr><td class="job">Maintain the operational / HR relationship with member</td><td class="today">Email / Slack / calls</td><td class="tool"><span class="tool-none">—</span></td></tr>
         </tbody>
       </table>
@@ -210,10 +211,11 @@
       <table class="jobs">
         <thead><tr><th>Should be able to...</th><th>How it's done today</th><th>Supporting tool</th></tr></thead>
         <tbody>
-          <tr><td class="job">Understand each member's hiring roadmap and operations</td><td class="today">In their head, scattered notes, Granola</td><td class="tool"><span class="tool-tag">Member roadmap field</span></td></tr>
-          <tr><td class="job">Review the shortlist + interview intel before advising</td><td class="today">Manual, asks the TA</td><td class="tool"><span class="tool-tag">HR view + linked data</span></td></tr>
+          <tr><td class="job">Understand each member's hiring + AI agents roadmap and operations</td><td class="today">In their head, scattered notes, Granola</td><td class="tool"><span class="tool-tag">Member roadmap fields</span></td></tr>
+          <tr><td class="job">Review shortlist + interview intel before advising</td><td class="today">Manual, asks the TA</td><td class="tool"><span class="tool-tag">HR view + linked data</span></td></tr>
           <tr><td class="job">Advise the member on which candidate to hire and why</td><td class="today">Calls, relationship</td><td class="tool"><span class="tool-none">—</span></td></tr>
           <tr><td class="job">Capture forward-looking demand signals</td><td class="today">Lost unless remembered</td><td class="tool"><span class="tool-tag">Tool 10 → Demand Signals table</span></td></tr>
+          <tr><td class="job">Generate a briefing doc after every meeting + update both roadmaps + post to Member Portal</td><td class="today">Done in head, briefly noted in Granola</td><td class="tool"><span class="tool-tag">Tool 14 · AP Briefing</span></td></tr>
           <tr><td class="job">Own account expansion + retention</td><td class="today">Relationship-driven, no system support</td><td class="tool"><span class="tool-tag">Member + open HRs view</span></td></tr>
           <tr><td class="job">See account health at a glance</td><td class="today">Multiple dashboards / manual</td><td class="tool"><span class="tool-tag">Member dashboard</span></td></tr>
         </tbody>
@@ -227,12 +229,14 @@
         <span class="role-badge">Cross-stage</span>
         <span class="role-name">System Owner / Stage Lead</span>
       </div>
-      <div class="role-who"><strong>Who:</strong> Jesus + stage leads. Run the line, not the requests.</div>
+      <div class="role-who"><strong>Who:</strong> Jesus + stage leads. Runs the line like a supply chain manager runs a production floor — manages the system, not the requests.</div>
       <table class="jobs">
         <thead><tr><th>Should be able to...</th><th>How it's done today</th><th>Supporting tool</th></tr></thead>
         <tbody>
+          <tr><td class="job">See all line KPIs in a unified supply-chain dashboard</td><td class="today">Multiple dashboards / manual</td><td class="tool"><span class="tool-tag">Tool 15 · Supervisor Dashboard (metrics)</span></td></tr>
+          <tr><td class="job">Ask the dashboard ad-hoc questions in natural language</td><td class="today">Doesn't exist</td><td class="tool"><span class="tool-tag">Tool 15 (NL query)</span></td></tr>
+          <tr><td class="job">See open HRs as Kanban CRM-style board for forecasting</td><td class="today">Doesn't exist</td><td class="tool"><span class="tool-tag">Tool 15 (Kanban)</span></td></tr>
           <tr><td class="job">See where the line is jammed (growing WIP per stage)</td><td class="today">Manual, multiple dashboards</td><td class="tool"><span class="tool-tag">Tool 11 · Bottleneck Detector</span></td></tr>
-          <tr><td class="job">Track throughput + stage-level metrics</td><td class="today">Zach's dashboard / Replit dashboard / manual</td><td class="tool"><span class="tool-tag">Metrics dashboard</span></td></tr>
           <tr><td class="job">Onboard a new team member into a single stage</td><td class="today">Ad hoc</td><td class="tool"><span class="tool-none">Process, not tool</span></td></tr>
           <tr><td class="job">Audit database health (freshness, decay, coverage)</td><td class="today">Not done systematically</td><td class="tool"><span class="tool-tag">Airtable views + decay automation</span></td></tr>
         </tbody>

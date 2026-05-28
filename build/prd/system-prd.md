@@ -79,11 +79,12 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 | # | The TA should be able to... | How it's done today | Supporting AI tool |
 |---|---|---|---|
 | 3.1 | Receive a Hiring Request (JD) from a member | Airtable / Zach's dashboard / Slack, varies | System: HR intake |
-| 3.2 | Find the best-matching candidates in the Ready database | Manual scanning of Airtable, hours per JD | **Tool 01 · JD ↔ Database Matching** |
-| 3.3 | Build a polished presentation page for the member | Hand-built HTML from a template, copy-paste from resumes | **Tool 02 · Presentation Page Builder** |
+| 3.1b | Merge the JD with the kickoff transcript into a structured internal briefing | Manual reading + memory | **Tool 13 · Briefing Generator** |
+| 3.2 | Find the best-matching candidates in the Ready database (top 20) | Manual scanning of Airtable, hours per JD | **Tool 01 · JD ↔ Database Matching** |
+| 3.3 | Build a polished presentation page for the member (member-branded, 2nd-batch detection, with feedback widget per candidate) | Hand-built HTML from a template, copy-paste from resumes | **Tool 02 · Presentation Page Builder** |
 | 3.4 | Prepare candidates ahead of member interviews | Manual coaching, inconsistent | **Tool 09 · Interview Prep Generator** |
-| 3.5 | Support / run interviews with the member | Manual, calls | — |
-| 3.6 | Capture a structured interview report after each interview | Free-text notes, often lost | **Tool 03 · Interview Report Creator** |
+| 3.5 | Support / run interviews with the member, prevent personal info sharing | Manual, calls | — |
+| 3.6 | Capture a structured interview report + auto-email candidate with feedback | Free-text notes, no candidate feedback today | **Tool 03 · Interview Report Creator + Candidate Email** |
 | 3.7 | Maintain the operational / HR-side relationship with the member | Email / Slack / calls | — |
 
 **Output of this role:** Shortlisted candidates + interview intelligence. Up to 10 matched candidates per JD, presentation page, match rationale, interview reports, candidate insights (which feed back into the database via auto-enrichment).
@@ -111,27 +112,31 @@ For every job, I've noted **how it's done today** so you can see what we're repl
 
 | # | The Decision Partner should be able to... | How it's done today | Supporting AI tool |
 |---|---|---|---|
-| 5.1 | Understand each member's hiring roadmap and operations | In their head, scattered notes, Granola | System: Member roadmap field |
+| 5.1 | Understand each member's hiring roadmap + AI agents roadmap and operations | In their head, scattered notes, Granola | System: Member roadmap fields (hiring + AI agents) |
 | 5.2 | Review the candidate shortlist + interview intel before advising the member | Manual, asks the TA | System: HR view with linked candidates + reports |
 | 5.3 | Advise the member on which candidate to hire and why | Calls, relationship | — |
 | 5.4 | Capture forward-looking demand signals from member conversations | Lost unless remembered | **Tool 10 · Demand Signal Analyzer** → Demand Signals table |
-| 5.5 | Own account expansion + retention (spot the next hire, grow the account) | Relationship-driven, no system support | System: Member + open HRs view |
-| 5.6 | See account health at a glance (placements, MRR, open roles) | Multiple dashboards / manual | System: Member dashboard |
+| 5.5 | After every meeting, generate a briefing doc + update both roadmaps + post to Member Portal | Done in their head, briefly noted in Granola | **Tool 14 · AP Meeting Briefing + Roadmap Updater** |
+| 5.6 | Own account expansion + retention (spot the next hire, grow the account) | Relationship-driven, no system support | System: Member + open HRs view |
+| 5.7 | See account health at a glance (placements, MRR, open roles) | Multiple dashboards / manual | System: Member dashboard |
 
 **Output of this role:** Placement, retention, account expansion. Plus demand signals that feed back into Sourcing.
 
 ---
 
-## Role 6 · System Owner / Stage Lead (cross-stage)
+## Role 6 · System Owner / Supply-Chain Manager (cross-stage)
 
-**Who:** Jesus + stage leads. Run the line, not the requests.
+**Who:** Jesus + stage leads. Runs the line like a supply chain manager runs a production floor — manages the system, not the requests.
 
 | # | The System Owner should be able to... | How it's done today | Supporting AI tool |
 |---|---|---|---|
-| 6.1 | See where the line is jammed (which stage has growing WIP) | Manual, multiple dashboards | **Tool 11 · Bottleneck Detector** |
-| 6.2 | Track throughput + stage-level metrics (time-to-first-presentation, placement rate, etc.) | Zach's dashboard / Replit dashboard / manual reporting | System: metrics dashboard |
-| 6.3 | Onboard a new team member into a single stage quickly | Ad hoc | — (process, not tool) |
-| 6.4 | Audit the health of the database (freshness, decay, coverage) | Not done systematically | Airtable views + decay automation |
+| 6.1 | See all line KPIs in one supply-chain-style dashboard | Multiple dashboards / manual | **Tool 15 · Supervisor Dashboard** (metrics view) |
+| 6.2 | Ask the dashboard ad-hoc questions in natural language ("how many SDR placements last month for White Glove?") and get a structured answer | Doesn't exist | **Tool 15** (NL query) |
+| 6.3 | See open HRs as a Kanban CRM-style board to forecast placements + revenue | Doesn't exist | **Tool 15** (Kanban view) |
+| 6.4 | See where the line is jammed (which stage has growing WIP) | Manual, multiple dashboards | **Tool 11 · Bottleneck Detector** |
+| 6.5 | Track throughput + stage-level metrics (time-to-first-presentation, placement rate, etc.) | Zach's dashboard / Replit dashboard / manual reporting | **Tool 15** |
+| 6.6 | Onboard a new team member into a single stage quickly | Ad hoc | — (process, not tool) |
+| 6.7 | Audit the health of the database (freshness, decay, coverage) | Not done systematically | Airtable views + decay automation |
 
 ---
 
@@ -154,11 +159,24 @@ Recommendation: **Airtable as v1.** Already in use, MCP integration ready, no cu
 
 ---
 
+## Member Portal (revamp, not new build)
+
+The Sagan Member Portal already exists. **We are not building it from scratch — we are revamping the UX/UI** to make it the unified surface where members access:
+
+- Their candidate presentation pages (1st batch, 2nd batch, etc. — all in one place per HR)
+- Per-meeting briefing docs from their Account Partner (Tool 14 output)
+- Their hiring roadmap + AI agents roadmap (live, updated at every touchpoint)
+- A per-candidate feedback widget on each presentation page
+
+The portal becomes the member's home for the relationship, not a static URL per HR.
+
+---
+
 ## What we're explicitly NOT building in v1
 
-- A custom front-end app (Airtable Interfaces are enough for v1)
-- Member-facing logins (members receive presentation pages as links, they don't log into the system)
+- A net-new front-end framework (the portal is a revamp; Airtable Interfaces cover internal views)
 - Automated sourcing (Stage 1 stays human-led in v1)
+- Member self-service hiring requests (members request through the AP, not via a form)
 
 ---
 

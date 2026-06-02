@@ -3,8 +3,7 @@
 **Onboarding call:** [date to confirm with Feli]
 **Member's Strategist:** Felicitas "Feli" Luna
 **Account number:** 11676 · Core tier · $499/mo · 30 hires/yr
-**Sales rep who closed:** Johno Ormond *(Sreejith Devadasan created the account record in the Database, but Johno owned the close)*
-**Renewal sentiment:** 🔴 At Risk (25) — **this onboarding call is the moment to flip it**
+**Sales rep who closed:** Johno Ormond
 **Master Google Doc:** [link](https://docs.google.com/document/d/1Jv7E9DbqMmoC1XP7_RkK4gQFhCBbP3WHrZnJ_sWrU3E)
 **NotebookLM:** [link](https://notebooklm.google.com/notebook/553de682-1ce7-41fe-b3b1-f0493bee6147)
 
@@ -110,7 +109,7 @@ Kentin explicitly self-selected "junior, easier to spoon-feed" in the sales call
 - **Paper-to-digital workflow agent** for Jennifer. OCR + categorize paper invoices into QBO. Massive unlock given the stated paper-world pain.
 - **Long-term: portfolio operations agent** — Cedar Ivy has multiple holdings, an agent that aggregates KPIs across the portfolio is a real asset for a holding company operator.
 
-**Renewal anchor moment:** When Feli surfaces this 4-hire roadmap unprompted — anchored to Cedar Ivy's long-term hold thesis — Kentin sees that Sagan isn't a recruiter. Sagan is the back-office partner who understands his operating model. **That's how the red renewal sentiment flips to green.**
+**Renewal anchor moment:** When Feli surfaces this 4-hire roadmap unprompted — anchored to Cedar Ivy's long-term hold thesis — Kentin sees that Sagan isn't a recruiter. Sagan is the back-office partner who understands his operating model. **That's how the partnership locks in early.**
 
 ---
 
@@ -154,7 +153,7 @@ Kentin explicitly self-selected "junior, easier to spoon-feed" in the sales call
 - **Don't promise "candidates in a week."** Kentin didn't ask for transactional speed — he asked for a partner who can articulate where he needs help. Sell the relationship.
 - **Don't make Jennifer feel like a sidekick.** She's an operating partner in the family enterprise. Address her directly in Blocks 3 and 4. The hire roadmap has to win her trust too. *"Jennifer, what does success look like for you 6 months from now?"*
 - **Don't say "Molloy Roofing" when you mean "Cedar Ivy" or vice versa.** Kentin's identity is Cedar Ivy, the operator-investor. Molloy is one (very important) portfolio holding. Showing fluency in that distinction signals you understand him.
-- **Don't pitch.** The renewal sentiment is at risk specifically because there's no traction yet. The fix isn't a better pitch — it's a better relationship.
+- **Don't pitch.** The membership is brand new. There's no fire to put out. The play is to build the relationship that earns the next 12 months, not to over-explain Sagan's value.
 
 ---
 
@@ -172,6 +171,4 @@ Kentin explicitly self-selected "junior, easier to spoon-feed" in the sales call
 
 Kentin is the most strategically valuable type of Sagan member: a portfolio-operator who, if he likes us, will route hiring for **multiple businesses** through Sagan for years. Cedar Ivy explicitly intends to acquire more family-owned businesses in Cincinnati. Every business Kentin acquires becomes a potential Sagan account.
 
-The onboarding call isn't about placing Molloy's first hire. **It's about making Cedar Ivy a Sagan account for the next decade.** Feli runs the call with that in mind.
-
-The renewal sentiment is 🔴 25 right now. After this call, it should be 🟢 75+. That's the bar.
+The onboarding call isn't about placing Molloy's first hire. **It's about making Cedar Ivy a Sagan account for the next decade.** Feli runs the call with that in mind. That's the bar.

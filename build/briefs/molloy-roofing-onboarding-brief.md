@@ -3,7 +3,7 @@
 **Onboarding call:** [date to confirm with Feli]
 **Member's Strategist:** Felicitas "Feli" Luna
 **Account number:** 11676 · Core tier · $499/mo · 30 hires/yr
-**Sales rep who closed:** Sreejith Devadasan
+**Sales rep who closed:** Johno Ormond *(Sreejith Devadasan created the account record in the Database, but Johno owned the close)*
 **Renewal sentiment:** 🔴 At Risk (25) — **this onboarding call is the moment to flip it**
 **Master Google Doc:** [link](https://docs.google.com/document/d/1Jv7E9DbqMmoC1XP7_RkK4gQFhCBbP3WHrZnJ_sWrU3E)
 **NotebookLM:** [link](https://notebooklm.google.com/notebook/553de682-1ce7-41fe-b3b1-f0493bee6147)
@@ -150,7 +150,7 @@ Kentin explicitly self-selected "junior, easier to spoon-feed" in the sales call
 
 - **Don't push the chief-of-staff / EA-at-$3k option.** Kentin already self-selected junior. The senior hire is #3 or #4, not #1.
 - **Don't reference the sales transcript directly.** *"You said X in the sales call"* shows your homework and feels surveillance-y. Use the signal, don't reveal the source.
-- **Don't quote the 18% pricing or the $499 membership.** Sreejith already covered it. Trust the prior conversation.
+- **Don't quote the 18% pricing or the $499 membership.** Johno already covered it. Trust the prior conversation.
 - **Don't promise "candidates in a week."** Kentin didn't ask for transactional speed — he asked for a partner who can articulate where he needs help. Sell the relationship.
 - **Don't make Jennifer feel like a sidekick.** She's an operating partner in the family enterprise. Address her directly in Blocks 3 and 4. The hire roadmap has to win her trust too. *"Jennifer, what does success look like for you 6 months from now?"*
 - **Don't say "Molloy Roofing" when you mean "Cedar Ivy" or vice versa.** Kentin's identity is Cedar Ivy, the operator-investor. Molloy is one (very important) portfolio holding. Showing fluency in that distinction signals you understand him.

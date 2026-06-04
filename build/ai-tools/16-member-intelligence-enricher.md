@@ -46,67 +46,113 @@ The onboarding call is the **first impression** of the partnership. Today, APs w
 }
 ```
 
-## Output
+## Output (v2 format — revised after Feli's feedback on the Molloy brief)
 
-A structured Member Brief, written to a document (Markdown → published in the Member Portal as an internal-only doc + sent to the AP).
+A **one-page** Member Brief. Under 3 minutes to read. The brief is a primer, not a script. It should leave the AP feeling prepared without feeling rehearsed.
+
+**Six sections, in order:**
+
+1. **Who is who** — one line per person on the call. Plain language. No jargon.
+2. **What's the deal** — one paragraph max. The business + operator's situation, "explain it like I'm five." No industry buzzwords.
+3. **Already covered in sales** — short bullet list of what NOT to re-ask
+4. **Where to focus** — ONE focus for this call. Not a list. The single thing that matters.
+5. **Questions worth asking** — the part the AP actually uses. Keep prominent. Group lightly by call block.
+6. **What NOT to do** — short, sharp, no more than 5 bullets.
+
+**Hard cuts from v1:**
+- Hypothetical multi-hire roadmap (it made the AP worry the call would feel rehearsed — she didn't use it)
+- Long industry context section
+- Long quote lists from sales transcripts
+- Multiple personal hooks (pick ONE and recommend it, don't list 4)
+- "What the AP needs to bring personally" (too prescriptive)
+- "Why this matters" closing section
+
+**Optional appendix (one click away, not in the main brief):**
+- Sources used (so AP can verify a fact mid-call if needed)
+- Full sales transcript link
+
+---
+
+## Example brief (v2 format)
 
 ```
-# Member Brief — Acme Corp — for onboarding call May 15
+# Member Brief — Acme Corp
 
-## Personal hooks for Block 1 (Real Opening)
-Pick one. Don't list them — pick the one that lands best.
+Onboarding call: May 15 · 2pm ET
+Strategist: Feli · Sales: Johno
 
-- **Sarah ran the NYC marathon in November** (mentioned briefly in sales discovery). 3:47 finish.
-- **Tom is a Cowboys fan** — saw a Cowboys background on his Zoom in the demo call.
-- **Acme was featured in TechCrunch last Thursday** about their Series A. Big deal for them.
-- **Sarah's son started kindergarten this fall** — mentioned in sales close call as the reason she wanted to wrap quickly.
 
-## Founder story signal (Block 2 prep)
-- **Sarah Chen, COO** — joined Acme as 4th hire, founder Mark Aldea kept her from her Salesforce days.
-- Prior: 6 years at Salesforce in ops, MIT '15 (operations research), did a stint at a YC pre-seed that failed in 2020.
-- Mark Aldea (CEO) is on the call but Sarah was the one Sagan sold to — Mark trusts her on hiring decisions.
-- Public clue: Sarah's most recent LinkedIn post talked about "the difference between a great hire and a perfect resume." That's a hint about how she thinks.
+WHO IS WHO
 
-## The business (Block 3 prep)
-- B2B SaaS, sales engagement platform (Salesloft / Outreach competitor, smaller niche)
-- Series A, $14M raised April 2026, 50 employees, HQ Austin
-- Founded 2021, growing 80% YoY
-- They're growing fastest in mid-market healthcare verticals (specific niche)
-- Unfair advantage according to sales transcripts: "we're the only platform built for regulated industries"
+• Sarah — COO. The person Sagan sold to. She decides hiring.
+• Tom — Head of Ops. Joined 8 months ago. Cares about tools + process.
+• Mark — CEO. Will be on the call. Trusts Sarah on hires.
 
-## Team today (Block 4 prep)
-- LinkedIn shows ~50 people. Recent hires: new VP Sales (Mark Stein, ex-Outreach), 6 SDRs in last 30 days
-- Sarah's likely pain point: she can hire AEs but SDRs are killing her bandwidth
-- Tom Riley (Head of Ops) joined 8 months ago — ex-McKinsey — likely owns vendor selection
 
-## Roadmap hypothesis (Block 5 prep — surface if founder doesn't)
-Based on Acme's stage + similar Sagan members:
-- **Hire #1 (now):** SDR (LATAM, Spanish + English, healthcare context a plus)
-- **Hire #2 (Q3):** CSR / onboarding specialist (their last 3 customers churned at onboarding per sales transcript)
-- **Hire #3 (Q4):** Sales Ops / RevOps to scale the SDR team
-- **AI agent build (possible):** prospect research agent — they mentioned manually building lists, this is gold for an AI build
+WHAT'S THE DEAL
 
-## Sales call insights (verbatim quotes worth referencing)
-- **Pain points:** "Our SDR onboarding is 6 weeks too slow" / "We can't find Spanish-speakers fast enough" / "We're spending too much on agencies"
-- **Budget signal:** mentioned "$2k/month range" for SDRs in demo
-- **Decision criteria:** "Quality over quantity. We don't want resume floods."
-- **The locker line:** "If you can show me 3 great candidates in a week, we'll trial it" — but the v2 call goal is to make her trust the relationship, not just hit this transactional bar
+Sarah and Tom run sales engagement software for healthcare companies.
+They have 50 people and they're growing fast. They hire a lot of SDRs and
+they can't keep up. They want help, but they want quality — not a flood
+of resumes. They specifically want LATAM Spanish-speakers.
 
-## Industry context (for credibility moments)
-- Sales engagement space is consolidating (Salesloft + Drift, Outreach IPO delayed)
-- LATAM talent: SDR salaries up 12% YoY, healthcare-vertical familiarity is rare
-- The "regulated industries" angle Acme owns is genuinely unique
 
-## What this AP needs to bring personally
-- One thing about you the founder doesn't already know. Be specific. Be human.
-- A 24-hour commitment doc plan ready to mention in Block 6
-- A roadmap hypothesis ready if Sarah doesn't have one
+ALREADY COVERED IN SALES — DON'T RE-ASK
 
-## What to NOT do
-- Don't lead with the SDR hire. Block 5 is where that happens, minute 20+.
-- Don't promise "3 candidates in a week" early — let Sarah ask, then commit confidently.
-- Don't reference the sales transcripts directly ("you said X in the sales call"). Use the signals; don't show your homework.
+• Their company stage, headcount, what they sell
+• Their general budget ($2k/mo for SDRs)
+• How Sagan pricing works
+• They want quality over quantity
+
+
+WHERE TO FOCUS
+
+Understand WHY their last 3 SDR hires didn't work. That's the real story.
+
+
+QUESTIONS WORTH ASKING
+
+Block 1 (opening):
+• "Congrats on the Mark Stein hire — how's the team adjusting?"
+
+Block 2 (founder story):
+• "What were you doing before Acme? What made you go all-in?"
+
+Block 4 (the team):
+• "Who's the person you couldn't run the business without — outside yourself?"
+
+Block 5 (roadmap):
+• "You're hiring SDRs now. What's the next seat after that?"
+
+
+DON'T DO THIS
+
+• Don't quote the $2k budget back to her — she said it once already.
+• Don't pitch the Sagan platform — Johno covered it.
+• Don't promise "3 candidates in a week" — Sarah said it but the goal is the relationship.
+• Don't make Tom feel like a sidekick. Ask him directly about tools.
 ```
+
+That's the entire brief. One page. Three minutes. Done.
+
+---
+
+## What changed from v1 → v2 (Feli's feedback)
+
+Feli ran the v1 brief on the Molloy onboarding. Her feedback (June 2026):
+- **Worked:** the questions to ask, the "what NOT to do" guardrails
+- **Didn't work:** too long, too much info, hypothetical roadmap felt rehearsed and she didn't use it
+- **Wanted:** "explain it like I'm 5," plain language, one focus, what shouldn't be repeated
+
+v2 is the response. Full feedback note: [`../briefs/v1-feedback-feli.md`](../briefs/v1-feedback-feli.md). v1 example brief: [`../briefs/molloy-roofing-onboarding-brief.html`](../briefs/molloy-roofing-onboarding-brief.html) (kept as historical reference).
+
+---
+
+## Post-call: capture what the AP learned
+
+The brief is the input. The AP also needs a **structured place to capture what they actually heard on the call** — names, who's been at the company a long time, who has the relationships, who pushes back. That's the raw material for the *next* touchpoint's brief.
+
+v1 didn't have this capture layer. v2 pairs with **Tool 14 (AP Meeting Briefing)**, which now produces a `key_people_at_company` long-text field on the Member record that grows over time. Every call enriches it. By call #3, the next brief Tool 16 generates includes those names automatically.
 
 ---
 
